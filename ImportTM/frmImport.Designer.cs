@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSelectFile = new System.Windows.Forms.Button();
             this.txtFilenameTM = new System.Windows.Forms.TextBox();
             this.openTM = new System.Windows.Forms.OpenFileDialog();
             this.btnOpenTM = new System.Windows.Forms.Button();
             this.txtToetscode = new System.Windows.Forms.TextBox();
-            this.btnCloseTM = new System.Windows.Forms.Button();
             this.txtToetsvorm = new System.Windows.Forms.TextBox();
             this.txtPKToets = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -169,53 +167,42 @@
             this.lstAvC1 = new System.Windows.Forms.ListBox();
             this.lstMvZ1 = new System.Windows.Forms.ListBox();
             this.lstGKM1 = new System.Windows.Forms.ListBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.listBox5 = new System.Windows.Forms.ListBox();
-            this.listBox6 = new System.Windows.Forms.ListBox();
-            this.listBox7 = new System.Windows.Forms.ListBox();
-            this.listBox8 = new System.Windows.Forms.ListBox();
-            this.listBox9 = new System.Windows.Forms.ListBox();
-            this.listBox10 = new System.Windows.Forms.ListBox();
-            this.listBox11 = new System.Windows.Forms.ListBox();
-            this.listBox12 = new System.Windows.Forms.ListBox();
-            this.listBox13 = new System.Windows.Forms.ListBox();
-            this.listBox14 = new System.Windows.Forms.ListBox();
-            this.listBox15 = new System.Windows.Forms.ListBox();
-            this.listBox16 = new System.Windows.Forms.ListBox();
-            this.listBox17 = new System.Windows.Forms.ListBox();
-            this.listBox18 = new System.Windows.Forms.ListBox();
-            this.listBox19 = new System.Windows.Forms.ListBox();
-            this.listBox20 = new System.Windows.Forms.ListBox();
-            this.listBox21 = new System.Windows.Forms.ListBox();
-            this.listBox22 = new System.Windows.Forms.ListBox();
-            this.listBox23 = new System.Windows.Forms.ListBox();
-            this.listBox24 = new System.Windows.Forms.ListBox();
-            this.listBox25 = new System.Windows.Forms.ListBox();
-            this.listBox26 = new System.Windows.Forms.ListBox();
-            this.listBox27 = new System.Windows.Forms.ListBox();
-            this.listBox28 = new System.Windows.Forms.ListBox();
-            this.listBox29 = new System.Windows.Forms.ListBox();
-            this.listBox30 = new System.Windows.Forms.ListBox();
-            this.listBox31 = new System.Windows.Forms.ListBox();
-            this.listBox32 = new System.Windows.Forms.ListBox();
-            this.listBox33 = new System.Windows.Forms.ListBox();
-            this.listBox34 = new System.Windows.Forms.ListBox();
-            this.listBox35 = new System.Windows.Forms.ListBox();
+            this.lstGKM2 = new System.Windows.Forms.ListBox();
+            this.lstMvZ2 = new System.Windows.Forms.ListBox();
+            this.lstAvC2 = new System.Windows.Forms.ListBox();
+            this.lstAvT2 = new System.Windows.Forms.ListBox();
+            this.lstComp2 = new System.Windows.Forms.ListBox();
+            this.lstGKM3 = new System.Windows.Forms.ListBox();
+            this.lstMvZ3 = new System.Windows.Forms.ListBox();
+            this.lstAvC3 = new System.Windows.Forms.ListBox();
+            this.lstAvT3 = new System.Windows.Forms.ListBox();
+            this.lstComp3 = new System.Windows.Forms.ListBox();
+            this.lstGKM4 = new System.Windows.Forms.ListBox();
+            this.lstMvZ4 = new System.Windows.Forms.ListBox();
+            this.lstAvC4 = new System.Windows.Forms.ListBox();
+            this.lstAvT4 = new System.Windows.Forms.ListBox();
+            this.lstComp4 = new System.Windows.Forms.ListBox();
+            this.lstGKM5 = new System.Windows.Forms.ListBox();
+            this.lstMvZ5 = new System.Windows.Forms.ListBox();
+            this.lstAvC5 = new System.Windows.Forms.ListBox();
+            this.lstAvT5 = new System.Windows.Forms.ListBox();
+            this.lstComp5 = new System.Windows.Forms.ListBox();
+            this.lstGKM8 = new System.Windows.Forms.ListBox();
+            this.lstMvZ8 = new System.Windows.Forms.ListBox();
+            this.lstAvC8 = new System.Windows.Forms.ListBox();
+            this.lstAvT8 = new System.Windows.Forms.ListBox();
+            this.lstComp8 = new System.Windows.Forms.ListBox();
+            this.lstGKM7 = new System.Windows.Forms.ListBox();
+            this.lstMvZ7 = new System.Windows.Forms.ListBox();
+            this.lstAvC7 = new System.Windows.Forms.ListBox();
+            this.lstAvT7 = new System.Windows.Forms.ListBox();
+            this.lstComp7 = new System.Windows.Forms.ListBox();
+            this.lstGKM6 = new System.Windows.Forms.ListBox();
+            this.lstMvZ6 = new System.Windows.Forms.ListBox();
+            this.lstAvC6 = new System.Windows.Forms.ListBox();
+            this.lstAvT6 = new System.Windows.Forms.ListBox();
+            this.lstComp6 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
-            // 
-            // btnSelectFile
-            // 
-            this.btnSelectFile.Location = new System.Drawing.Point(12, 27);
-            this.btnSelectFile.Name = "btnSelectFile";
-            this.btnSelectFile.Size = new System.Drawing.Size(149, 23);
-            this.btnSelectFile.TabIndex = 0;
-            this.btnSelectFile.Text = "1: Selecteer Toetsmatrijs";
-            this.btnSelectFile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSelectFile.UseVisualStyleBackColor = true;
-            this.btnSelectFile.Click += new System.EventHandler(this.btnSelectFile_Click);
             // 
             // txtFilenameTM
             // 
@@ -233,11 +220,11 @@
             // 
             // btnOpenTM
             // 
-            this.btnOpenTM.Location = new System.Drawing.Point(12, 56);
+            this.btnOpenTM.Location = new System.Drawing.Point(12, 27);
             this.btnOpenTM.Name = "btnOpenTM";
             this.btnOpenTM.Size = new System.Drawing.Size(149, 23);
             this.btnOpenTM.TabIndex = 2;
-            this.btnOpenTM.Text = "2: Open Toetsmatrijs";
+            this.btnOpenTM.Text = "1: Open Toetsmatrijs";
             this.btnOpenTM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOpenTM.UseVisualStyleBackColor = true;
             this.btnOpenTM.Click += new System.EventHandler(this.btnOpenTM_Click);
@@ -248,17 +235,6 @@
             this.txtToetscode.Name = "txtToetscode";
             this.txtToetscode.Size = new System.Drawing.Size(357, 20);
             this.txtToetscode.TabIndex = 3;
-            // 
-            // btnCloseTM
-            // 
-            this.btnCloseTM.Location = new System.Drawing.Point(50, 688);
-            this.btnCloseTM.Name = "btnCloseTM";
-            this.btnCloseTM.Size = new System.Drawing.Size(149, 23);
-            this.btnCloseTM.TabIndex = 4;
-            this.btnCloseTM.Text = "10: Sluit Toetsmatrijs";
-            this.btnCloseTM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCloseTM.UseVisualStyleBackColor = true;
-            this.btnCloseTM.Click += new System.EventHandler(this.btnCloseTM_Click);
             // 
             // txtToetsvorm
             // 
@@ -1300,326 +1276,326 @@
             this.lstGKM1.Size = new System.Drawing.Size(106, 56);
             this.lstGKM1.TabIndex = 139;
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(1195, 255);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(106, 56);
-            this.listBox1.TabIndex = 144;
+            // lstGKM2
+            // 
+            this.lstGKM2.FormattingEnabled = true;
+            this.lstGKM2.Location = new System.Drawing.Point(1195, 255);
+            this.lstGKM2.Name = "lstGKM2";
+            this.lstGKM2.Size = new System.Drawing.Size(106, 56);
+            this.lstGKM2.TabIndex = 144;
             // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(1155, 255);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(34, 56);
-            this.listBox2.TabIndex = 143;
+            // lstMvZ2
+            // 
+            this.lstMvZ2.FormattingEnabled = true;
+            this.lstMvZ2.Location = new System.Drawing.Point(1155, 255);
+            this.lstMvZ2.Name = "lstMvZ2";
+            this.lstMvZ2.Size = new System.Drawing.Size(34, 56);
+            this.lstMvZ2.TabIndex = 143;
             // 
-            // listBox3
-            // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(1115, 255);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(34, 56);
-            this.listBox3.TabIndex = 142;
+            // lstAvC2
+            // 
+            this.lstAvC2.FormattingEnabled = true;
+            this.lstAvC2.Location = new System.Drawing.Point(1115, 255);
+            this.lstAvC2.Name = "lstAvC2";
+            this.lstAvC2.Size = new System.Drawing.Size(34, 56);
+            this.lstAvC2.TabIndex = 142;
             // 
-            // listBox4
-            // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.Location = new System.Drawing.Point(1075, 255);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(34, 56);
-            this.listBox4.TabIndex = 141;
+            // lstAvT2
+            // 
+            this.lstAvT2.FormattingEnabled = true;
+            this.lstAvT2.Location = new System.Drawing.Point(1075, 255);
+            this.lstAvT2.Name = "lstAvT2";
+            this.lstAvT2.Size = new System.Drawing.Size(34, 56);
+            this.lstAvT2.TabIndex = 141;
             // 
-            // listBox5
-            // 
-            this.listBox5.FormattingEnabled = true;
-            this.listBox5.Location = new System.Drawing.Point(1016, 255);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(53, 56);
-            this.listBox5.TabIndex = 140;
+            // lstComp2
+            // 
+            this.lstComp2.FormattingEnabled = true;
+            this.lstComp2.Location = new System.Drawing.Point(1016, 255);
+            this.lstComp2.Name = "lstComp2";
+            this.lstComp2.Size = new System.Drawing.Size(53, 56);
+            this.lstComp2.TabIndex = 140;
             // 
-            // listBox6
-            // 
-            this.listBox6.FormattingEnabled = true;
-            this.listBox6.Location = new System.Drawing.Point(1195, 315);
-            this.listBox6.Name = "listBox6";
-            this.listBox6.Size = new System.Drawing.Size(106, 56);
-            this.listBox6.TabIndex = 149;
+            // lstGKM3
+            // 
+            this.lstGKM3.FormattingEnabled = true;
+            this.lstGKM3.Location = new System.Drawing.Point(1195, 315);
+            this.lstGKM3.Name = "lstGKM3";
+            this.lstGKM3.Size = new System.Drawing.Size(106, 56);
+            this.lstGKM3.TabIndex = 149;
             // 
-            // listBox7
-            // 
-            this.listBox7.FormattingEnabled = true;
-            this.listBox7.Location = new System.Drawing.Point(1155, 315);
-            this.listBox7.Name = "listBox7";
-            this.listBox7.Size = new System.Drawing.Size(34, 56);
-            this.listBox7.TabIndex = 148;
+            // lstMvZ3
+            // 
+            this.lstMvZ3.FormattingEnabled = true;
+            this.lstMvZ3.Location = new System.Drawing.Point(1155, 315);
+            this.lstMvZ3.Name = "lstMvZ3";
+            this.lstMvZ3.Size = new System.Drawing.Size(34, 56);
+            this.lstMvZ3.TabIndex = 148;
             // 
-            // listBox8
-            // 
-            this.listBox8.FormattingEnabled = true;
-            this.listBox8.Location = new System.Drawing.Point(1115, 315);
-            this.listBox8.Name = "listBox8";
-            this.listBox8.Size = new System.Drawing.Size(34, 56);
-            this.listBox8.TabIndex = 147;
+            // lstAvC3
+            // 
+            this.lstAvC3.FormattingEnabled = true;
+            this.lstAvC3.Location = new System.Drawing.Point(1115, 315);
+            this.lstAvC3.Name = "lstAvC3";
+            this.lstAvC3.Size = new System.Drawing.Size(34, 56);
+            this.lstAvC3.TabIndex = 147;
             // 
-            // listBox9
-            // 
-            this.listBox9.FormattingEnabled = true;
-            this.listBox9.Location = new System.Drawing.Point(1075, 315);
-            this.listBox9.Name = "listBox9";
-            this.listBox9.Size = new System.Drawing.Size(34, 56);
-            this.listBox9.TabIndex = 146;
+            // lstAvT3
+            // 
+            this.lstAvT3.FormattingEnabled = true;
+            this.lstAvT3.Location = new System.Drawing.Point(1075, 315);
+            this.lstAvT3.Name = "lstAvT3";
+            this.lstAvT3.Size = new System.Drawing.Size(34, 56);
+            this.lstAvT3.TabIndex = 146;
             // 
-            // listBox10
-            // 
-            this.listBox10.FormattingEnabled = true;
-            this.listBox10.Location = new System.Drawing.Point(1016, 315);
-            this.listBox10.Name = "listBox10";
-            this.listBox10.Size = new System.Drawing.Size(53, 56);
-            this.listBox10.TabIndex = 145;
+            // lstComp3
+            // 
+            this.lstComp3.FormattingEnabled = true;
+            this.lstComp3.Location = new System.Drawing.Point(1016, 315);
+            this.lstComp3.Name = "lstComp3";
+            this.lstComp3.Size = new System.Drawing.Size(53, 56);
+            this.lstComp3.TabIndex = 145;
             // 
-            // listBox11
-            // 
-            this.listBox11.FormattingEnabled = true;
-            this.listBox11.Location = new System.Drawing.Point(1195, 375);
-            this.listBox11.Name = "listBox11";
-            this.listBox11.Size = new System.Drawing.Size(106, 56);
-            this.listBox11.TabIndex = 154;
+            // lstGKM4
+            // 
+            this.lstGKM4.FormattingEnabled = true;
+            this.lstGKM4.Location = new System.Drawing.Point(1195, 375);
+            this.lstGKM4.Name = "lstGKM4";
+            this.lstGKM4.Size = new System.Drawing.Size(106, 56);
+            this.lstGKM4.TabIndex = 154;
             // 
-            // listBox12
-            // 
-            this.listBox12.FormattingEnabled = true;
-            this.listBox12.Location = new System.Drawing.Point(1155, 375);
-            this.listBox12.Name = "listBox12";
-            this.listBox12.Size = new System.Drawing.Size(34, 56);
-            this.listBox12.TabIndex = 153;
+            // lstMvZ4
+            // 
+            this.lstMvZ4.FormattingEnabled = true;
+            this.lstMvZ4.Location = new System.Drawing.Point(1155, 375);
+            this.lstMvZ4.Name = "lstMvZ4";
+            this.lstMvZ4.Size = new System.Drawing.Size(34, 56);
+            this.lstMvZ4.TabIndex = 153;
             // 
-            // listBox13
-            // 
-            this.listBox13.FormattingEnabled = true;
-            this.listBox13.Location = new System.Drawing.Point(1115, 375);
-            this.listBox13.Name = "listBox13";
-            this.listBox13.Size = new System.Drawing.Size(34, 56);
-            this.listBox13.TabIndex = 152;
+            // lstAvC4
+            // 
+            this.lstAvC4.FormattingEnabled = true;
+            this.lstAvC4.Location = new System.Drawing.Point(1115, 375);
+            this.lstAvC4.Name = "lstAvC4";
+            this.lstAvC4.Size = new System.Drawing.Size(34, 56);
+            this.lstAvC4.TabIndex = 152;
             // 
-            // listBox14
-            // 
-            this.listBox14.FormattingEnabled = true;
-            this.listBox14.Location = new System.Drawing.Point(1075, 375);
-            this.listBox14.Name = "listBox14";
-            this.listBox14.Size = new System.Drawing.Size(34, 56);
-            this.listBox14.TabIndex = 151;
+            // lstAvT4
+            // 
+            this.lstAvT4.FormattingEnabled = true;
+            this.lstAvT4.Location = new System.Drawing.Point(1075, 375);
+            this.lstAvT4.Name = "lstAvT4";
+            this.lstAvT4.Size = new System.Drawing.Size(34, 56);
+            this.lstAvT4.TabIndex = 151;
             // 
-            // listBox15
-            // 
-            this.listBox15.FormattingEnabled = true;
-            this.listBox15.Location = new System.Drawing.Point(1016, 375);
-            this.listBox15.Name = "listBox15";
-            this.listBox15.Size = new System.Drawing.Size(53, 56);
-            this.listBox15.TabIndex = 150;
+            // lstComp4
+            // 
+            this.lstComp4.FormattingEnabled = true;
+            this.lstComp4.Location = new System.Drawing.Point(1016, 375);
+            this.lstComp4.Name = "lstComp4";
+            this.lstComp4.Size = new System.Drawing.Size(53, 56);
+            this.lstComp4.TabIndex = 150;
             // 
-            // listBox16
-            // 
-            this.listBox16.FormattingEnabled = true;
-            this.listBox16.Location = new System.Drawing.Point(1195, 435);
-            this.listBox16.Name = "listBox16";
-            this.listBox16.Size = new System.Drawing.Size(106, 56);
-            this.listBox16.TabIndex = 159;
+            // lstGKM5
+            // 
+            this.lstGKM5.FormattingEnabled = true;
+            this.lstGKM5.Location = new System.Drawing.Point(1195, 435);
+            this.lstGKM5.Name = "lstGKM5";
+            this.lstGKM5.Size = new System.Drawing.Size(106, 56);
+            this.lstGKM5.TabIndex = 159;
             // 
-            // listBox17
-            // 
-            this.listBox17.FormattingEnabled = true;
-            this.listBox17.Location = new System.Drawing.Point(1155, 435);
-            this.listBox17.Name = "listBox17";
-            this.listBox17.Size = new System.Drawing.Size(34, 56);
-            this.listBox17.TabIndex = 158;
+            // lstMvZ5
+            // 
+            this.lstMvZ5.FormattingEnabled = true;
+            this.lstMvZ5.Location = new System.Drawing.Point(1155, 435);
+            this.lstMvZ5.Name = "lstMvZ5";
+            this.lstMvZ5.Size = new System.Drawing.Size(34, 56);
+            this.lstMvZ5.TabIndex = 158;
             // 
-            // listBox18
-            // 
-            this.listBox18.FormattingEnabled = true;
-            this.listBox18.Location = new System.Drawing.Point(1115, 435);
-            this.listBox18.Name = "listBox18";
-            this.listBox18.Size = new System.Drawing.Size(34, 56);
-            this.listBox18.TabIndex = 157;
+            // lstAvC5
+            // 
+            this.lstAvC5.FormattingEnabled = true;
+            this.lstAvC5.Location = new System.Drawing.Point(1115, 435);
+            this.lstAvC5.Name = "lstAvC5";
+            this.lstAvC5.Size = new System.Drawing.Size(34, 56);
+            this.lstAvC5.TabIndex = 157;
             // 
-            // listBox19
-            // 
-            this.listBox19.FormattingEnabled = true;
-            this.listBox19.Location = new System.Drawing.Point(1075, 435);
-            this.listBox19.Name = "listBox19";
-            this.listBox19.Size = new System.Drawing.Size(34, 56);
-            this.listBox19.TabIndex = 156;
+            // lstAvT5
+            // 
+            this.lstAvT5.FormattingEnabled = true;
+            this.lstAvT5.Location = new System.Drawing.Point(1075, 435);
+            this.lstAvT5.Name = "lstAvT5";
+            this.lstAvT5.Size = new System.Drawing.Size(34, 56);
+            this.lstAvT5.TabIndex = 156;
             // 
-            // listBox20
-            // 
-            this.listBox20.FormattingEnabled = true;
-            this.listBox20.Location = new System.Drawing.Point(1016, 435);
-            this.listBox20.Name = "listBox20";
-            this.listBox20.Size = new System.Drawing.Size(53, 56);
-            this.listBox20.TabIndex = 155;
+            // lstComp5
+            // 
+            this.lstComp5.FormattingEnabled = true;
+            this.lstComp5.Location = new System.Drawing.Point(1016, 435);
+            this.lstComp5.Name = "lstComp5";
+            this.lstComp5.Size = new System.Drawing.Size(53, 56);
+            this.lstComp5.TabIndex = 155;
             // 
-            // listBox21
-            // 
-            this.listBox21.FormattingEnabled = true;
-            this.listBox21.Location = new System.Drawing.Point(1195, 615);
-            this.listBox21.Name = "listBox21";
-            this.listBox21.Size = new System.Drawing.Size(106, 56);
-            this.listBox21.TabIndex = 174;
+            // lstGKM8
+            // 
+            this.lstGKM8.FormattingEnabled = true;
+            this.lstGKM8.Location = new System.Drawing.Point(1195, 615);
+            this.lstGKM8.Name = "lstGKM8";
+            this.lstGKM8.Size = new System.Drawing.Size(106, 56);
+            this.lstGKM8.TabIndex = 174;
             // 
-            // listBox22
-            // 
-            this.listBox22.FormattingEnabled = true;
-            this.listBox22.Location = new System.Drawing.Point(1155, 615);
-            this.listBox22.Name = "listBox22";
-            this.listBox22.Size = new System.Drawing.Size(34, 56);
-            this.listBox22.TabIndex = 173;
+            // lstMvZ8
+            // 
+            this.lstMvZ8.FormattingEnabled = true;
+            this.lstMvZ8.Location = new System.Drawing.Point(1155, 615);
+            this.lstMvZ8.Name = "lstMvZ8";
+            this.lstMvZ8.Size = new System.Drawing.Size(34, 56);
+            this.lstMvZ8.TabIndex = 173;
             // 
-            // listBox23
-            // 
-            this.listBox23.FormattingEnabled = true;
-            this.listBox23.Location = new System.Drawing.Point(1115, 615);
-            this.listBox23.Name = "listBox23";
-            this.listBox23.Size = new System.Drawing.Size(34, 56);
-            this.listBox23.TabIndex = 172;
-            // 
-            // listBox24
-            // 
-            this.listBox24.FormattingEnabled = true;
-            this.listBox24.Location = new System.Drawing.Point(1075, 615);
-            this.listBox24.Name = "listBox24";
-            this.listBox24.Size = new System.Drawing.Size(34, 56);
-            this.listBox24.TabIndex = 171;
-            // 
-            // listBox25
-            // 
-            this.listBox25.FormattingEnabled = true;
-            this.listBox25.Location = new System.Drawing.Point(1016, 615);
-            this.listBox25.Name = "listBox25";
-            this.listBox25.Size = new System.Drawing.Size(53, 56);
-            this.listBox25.TabIndex = 170;
-            // 
-            // listBox26
-            // 
-            this.listBox26.FormattingEnabled = true;
-            this.listBox26.Location = new System.Drawing.Point(1195, 555);
-            this.listBox26.Name = "listBox26";
-            this.listBox26.Size = new System.Drawing.Size(106, 56);
-            this.listBox26.TabIndex = 169;
-            // 
-            // listBox27
-            // 
-            this.listBox27.FormattingEnabled = true;
-            this.listBox27.Location = new System.Drawing.Point(1155, 555);
-            this.listBox27.Name = "listBox27";
-            this.listBox27.Size = new System.Drawing.Size(34, 56);
-            this.listBox27.TabIndex = 168;
-            // 
-            // listBox28
-            // 
-            this.listBox28.FormattingEnabled = true;
-            this.listBox28.Location = new System.Drawing.Point(1115, 555);
-            this.listBox28.Name = "listBox28";
-            this.listBox28.Size = new System.Drawing.Size(34, 56);
-            this.listBox28.TabIndex = 167;
-            // 
-            // listBox29
-            // 
-            this.listBox29.FormattingEnabled = true;
-            this.listBox29.Location = new System.Drawing.Point(1075, 555);
-            this.listBox29.Name = "listBox29";
-            this.listBox29.Size = new System.Drawing.Size(34, 56);
-            this.listBox29.TabIndex = 166;
-            // 
-            // listBox30
-            // 
-            this.listBox30.FormattingEnabled = true;
-            this.listBox30.Location = new System.Drawing.Point(1016, 555);
-            this.listBox30.Name = "listBox30";
-            this.listBox30.Size = new System.Drawing.Size(53, 56);
-            this.listBox30.TabIndex = 165;
-            // 
-            // listBox31
-            // 
-            this.listBox31.FormattingEnabled = true;
-            this.listBox31.Location = new System.Drawing.Point(1195, 495);
-            this.listBox31.Name = "listBox31";
-            this.listBox31.Size = new System.Drawing.Size(106, 56);
-            this.listBox31.TabIndex = 164;
-            // 
-            // listBox32
-            // 
-            this.listBox32.FormattingEnabled = true;
-            this.listBox32.Location = new System.Drawing.Point(1155, 495);
-            this.listBox32.Name = "listBox32";
-            this.listBox32.Size = new System.Drawing.Size(34, 56);
-            this.listBox32.TabIndex = 163;
-            // 
-            // listBox33
-            // 
-            this.listBox33.FormattingEnabled = true;
-            this.listBox33.Location = new System.Drawing.Point(1115, 495);
-            this.listBox33.Name = "listBox33";
-            this.listBox33.Size = new System.Drawing.Size(34, 56);
-            this.listBox33.TabIndex = 162;
-            // 
-            // listBox34
-            // 
-            this.listBox34.FormattingEnabled = true;
-            this.listBox34.Location = new System.Drawing.Point(1075, 495);
-            this.listBox34.Name = "listBox34";
-            this.listBox34.Size = new System.Drawing.Size(34, 56);
-            this.listBox34.TabIndex = 161;
-            // 
-            // listBox35
-            // 
-            this.listBox35.FormattingEnabled = true;
-            this.listBox35.Location = new System.Drawing.Point(1016, 495);
-            this.listBox35.Name = "listBox35";
-            this.listBox35.Size = new System.Drawing.Size(53, 56);
-            this.listBox35.TabIndex = 160;
+            // lstAvC8
+            // 
+            this.lstAvC8.FormattingEnabled = true;
+            this.lstAvC8.Location = new System.Drawing.Point(1115, 615);
+            this.lstAvC8.Name = "lstAvC8";
+            this.lstAvC8.Size = new System.Drawing.Size(34, 56);
+            this.lstAvC8.TabIndex = 172;
+            // 
+            // lstAvT8
+            // 
+            this.lstAvT8.FormattingEnabled = true;
+            this.lstAvT8.Location = new System.Drawing.Point(1075, 615);
+            this.lstAvT8.Name = "lstAvT8";
+            this.lstAvT8.Size = new System.Drawing.Size(34, 56);
+            this.lstAvT8.TabIndex = 171;
+            // 
+            // lstComp8
+            // 
+            this.lstComp8.FormattingEnabled = true;
+            this.lstComp8.Location = new System.Drawing.Point(1016, 615);
+            this.lstComp8.Name = "lstComp8";
+            this.lstComp8.Size = new System.Drawing.Size(53, 56);
+            this.lstComp8.TabIndex = 170;
+            // 
+            // lstGKM7
+            // 
+            this.lstGKM7.FormattingEnabled = true;
+            this.lstGKM7.Location = new System.Drawing.Point(1195, 555);
+            this.lstGKM7.Name = "lstGKM7";
+            this.lstGKM7.Size = new System.Drawing.Size(106, 56);
+            this.lstGKM7.TabIndex = 169;
+            // 
+            // lstMvZ7
+            // 
+            this.lstMvZ7.FormattingEnabled = true;
+            this.lstMvZ7.Location = new System.Drawing.Point(1155, 555);
+            this.lstMvZ7.Name = "lstMvZ7";
+            this.lstMvZ7.Size = new System.Drawing.Size(34, 56);
+            this.lstMvZ7.TabIndex = 168;
+            // 
+            // lstAvC7
+            // 
+            this.lstAvC7.FormattingEnabled = true;
+            this.lstAvC7.Location = new System.Drawing.Point(1115, 555);
+            this.lstAvC7.Name = "lstAvC7";
+            this.lstAvC7.Size = new System.Drawing.Size(34, 56);
+            this.lstAvC7.TabIndex = 167;
+            // 
+            // lstAvT7
+            // 
+            this.lstAvT7.FormattingEnabled = true;
+            this.lstAvT7.Location = new System.Drawing.Point(1075, 555);
+            this.lstAvT7.Name = "lstAvT7";
+            this.lstAvT7.Size = new System.Drawing.Size(34, 56);
+            this.lstAvT7.TabIndex = 166;
+            // 
+            // lstComp7
+            // 
+            this.lstComp7.FormattingEnabled = true;
+            this.lstComp7.Location = new System.Drawing.Point(1016, 555);
+            this.lstComp7.Name = "lstComp7";
+            this.lstComp7.Size = new System.Drawing.Size(53, 56);
+            this.lstComp7.TabIndex = 165;
+            // 
+            // lstGKM6
+            // 
+            this.lstGKM6.FormattingEnabled = true;
+            this.lstGKM6.Location = new System.Drawing.Point(1195, 495);
+            this.lstGKM6.Name = "lstGKM6";
+            this.lstGKM6.Size = new System.Drawing.Size(106, 56);
+            this.lstGKM6.TabIndex = 164;
+            // 
+            // lstMvZ6
+            // 
+            this.lstMvZ6.FormattingEnabled = true;
+            this.lstMvZ6.Location = new System.Drawing.Point(1155, 495);
+            this.lstMvZ6.Name = "lstMvZ6";
+            this.lstMvZ6.Size = new System.Drawing.Size(34, 56);
+            this.lstMvZ6.TabIndex = 163;
+            // 
+            // lstAvC6
+            // 
+            this.lstAvC6.FormattingEnabled = true;
+            this.lstAvC6.Location = new System.Drawing.Point(1115, 495);
+            this.lstAvC6.Name = "lstAvC6";
+            this.lstAvC6.Size = new System.Drawing.Size(34, 56);
+            this.lstAvC6.TabIndex = 162;
+            // 
+            // lstAvT6
+            // 
+            this.lstAvT6.FormattingEnabled = true;
+            this.lstAvT6.Location = new System.Drawing.Point(1075, 495);
+            this.lstAvT6.Name = "lstAvT6";
+            this.lstAvT6.Size = new System.Drawing.Size(34, 56);
+            this.lstAvT6.TabIndex = 161;
+            // 
+            // lstComp6
+            // 
+            this.lstComp6.FormattingEnabled = true;
+            this.lstComp6.Location = new System.Drawing.Point(1016, 495);
+            this.lstComp6.Name = "lstComp6";
+            this.lstComp6.Size = new System.Drawing.Size(53, 56);
+            this.lstComp6.TabIndex = 160;
             // 
             // frmImport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1609, 738);
-            this.Controls.Add(this.listBox21);
-            this.Controls.Add(this.listBox22);
-            this.Controls.Add(this.listBox23);
-            this.Controls.Add(this.listBox24);
-            this.Controls.Add(this.listBox25);
-            this.Controls.Add(this.listBox26);
-            this.Controls.Add(this.listBox27);
-            this.Controls.Add(this.listBox28);
-            this.Controls.Add(this.listBox29);
-            this.Controls.Add(this.listBox30);
-            this.Controls.Add(this.listBox31);
-            this.Controls.Add(this.listBox32);
-            this.Controls.Add(this.listBox33);
-            this.Controls.Add(this.listBox34);
-            this.Controls.Add(this.listBox35);
-            this.Controls.Add(this.listBox16);
-            this.Controls.Add(this.listBox17);
-            this.Controls.Add(this.listBox18);
-            this.Controls.Add(this.listBox19);
-            this.Controls.Add(this.listBox20);
-            this.Controls.Add(this.listBox11);
-            this.Controls.Add(this.listBox12);
-            this.Controls.Add(this.listBox13);
-            this.Controls.Add(this.listBox14);
-            this.Controls.Add(this.listBox15);
-            this.Controls.Add(this.listBox6);
-            this.Controls.Add(this.listBox7);
-            this.Controls.Add(this.listBox8);
-            this.Controls.Add(this.listBox9);
-            this.Controls.Add(this.listBox10);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox3);
-            this.Controls.Add(this.listBox4);
-            this.Controls.Add(this.listBox5);
+            this.Controls.Add(this.lstGKM8);
+            this.Controls.Add(this.lstMvZ8);
+            this.Controls.Add(this.lstAvC8);
+            this.Controls.Add(this.lstAvT8);
+            this.Controls.Add(this.lstComp8);
+            this.Controls.Add(this.lstGKM7);
+            this.Controls.Add(this.lstMvZ7);
+            this.Controls.Add(this.lstAvC7);
+            this.Controls.Add(this.lstAvT7);
+            this.Controls.Add(this.lstComp7);
+            this.Controls.Add(this.lstGKM6);
+            this.Controls.Add(this.lstMvZ6);
+            this.Controls.Add(this.lstAvC6);
+            this.Controls.Add(this.lstAvT6);
+            this.Controls.Add(this.lstComp6);
+            this.Controls.Add(this.lstGKM5);
+            this.Controls.Add(this.lstMvZ5);
+            this.Controls.Add(this.lstAvC5);
+            this.Controls.Add(this.lstAvT5);
+            this.Controls.Add(this.lstComp5);
+            this.Controls.Add(this.lstGKM4);
+            this.Controls.Add(this.lstMvZ4);
+            this.Controls.Add(this.lstAvC4);
+            this.Controls.Add(this.lstAvT4);
+            this.Controls.Add(this.lstComp4);
+            this.Controls.Add(this.lstGKM3);
+            this.Controls.Add(this.lstMvZ3);
+            this.Controls.Add(this.lstAvC3);
+            this.Controls.Add(this.lstAvT3);
+            this.Controls.Add(this.lstComp3);
+            this.Controls.Add(this.lstGKM2);
+            this.Controls.Add(this.lstMvZ2);
+            this.Controls.Add(this.lstAvC2);
+            this.Controls.Add(this.lstAvT2);
+            this.Controls.Add(this.lstComp2);
             this.Controls.Add(this.lstGKM1);
             this.Controls.Add(this.lstMvZ1);
             this.Controls.Add(this.lstAvC1);
@@ -1755,11 +1731,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPKToets);
             this.Controls.Add(this.txtToetsvorm);
-            this.Controls.Add(this.btnCloseTM);
             this.Controls.Add(this.txtToetscode);
             this.Controls.Add(this.btnOpenTM);
             this.Controls.Add(this.txtFilenameTM);
-            this.Controls.Add(this.btnSelectFile);
             this.Name = "frmImport";
             this.Text = "Import from Excel";
             this.Load += new System.EventHandler(this.frmImport_Load);
@@ -1769,13 +1743,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnSelectFile;
         private System.Windows.Forms.TextBox txtFilenameTM;
         public System.Windows.Forms.OpenFileDialog openTM;
         private System.Windows.Forms.Button btnOpenTM;
         private System.Windows.Forms.TextBox txtToetscode;
-        private System.Windows.Forms.Button btnCloseTM;
         private System.Windows.Forms.TextBox txtToetsvorm;
         private System.Windows.Forms.TextBox txtPKToets;
         private System.Windows.Forms.Label label1;
@@ -1911,41 +1882,41 @@
         private System.Windows.Forms.ListBox lstAvC1;
         private System.Windows.Forms.ListBox lstMvZ1;
         private System.Windows.Forms.ListBox lstGKM1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.ListBox listBox4;
-        private System.Windows.Forms.ListBox listBox5;
-        private System.Windows.Forms.ListBox listBox6;
-        private System.Windows.Forms.ListBox listBox7;
-        private System.Windows.Forms.ListBox listBox8;
-        private System.Windows.Forms.ListBox listBox9;
-        private System.Windows.Forms.ListBox listBox10;
-        private System.Windows.Forms.ListBox listBox11;
-        private System.Windows.Forms.ListBox listBox12;
-        private System.Windows.Forms.ListBox listBox13;
-        private System.Windows.Forms.ListBox listBox14;
-        private System.Windows.Forms.ListBox listBox15;
-        private System.Windows.Forms.ListBox listBox16;
-        private System.Windows.Forms.ListBox listBox17;
-        private System.Windows.Forms.ListBox listBox18;
-        private System.Windows.Forms.ListBox listBox19;
-        private System.Windows.Forms.ListBox listBox20;
-        private System.Windows.Forms.ListBox listBox21;
-        private System.Windows.Forms.ListBox listBox22;
-        private System.Windows.Forms.ListBox listBox23;
-        private System.Windows.Forms.ListBox listBox24;
-        private System.Windows.Forms.ListBox listBox25;
-        private System.Windows.Forms.ListBox listBox26;
-        private System.Windows.Forms.ListBox listBox27;
-        private System.Windows.Forms.ListBox listBox28;
-        private System.Windows.Forms.ListBox listBox29;
-        private System.Windows.Forms.ListBox listBox30;
-        private System.Windows.Forms.ListBox listBox31;
-        private System.Windows.Forms.ListBox listBox32;
-        private System.Windows.Forms.ListBox listBox33;
-        private System.Windows.Forms.ListBox listBox34;
-        private System.Windows.Forms.ListBox listBox35;
+        private System.Windows.Forms.ListBox lstGKM2;
+        private System.Windows.Forms.ListBox lstMvZ2;
+        private System.Windows.Forms.ListBox lstAvC2;
+        private System.Windows.Forms.ListBox lstAvT2;
+        private System.Windows.Forms.ListBox lstComp2;
+        private System.Windows.Forms.ListBox lstGKM3;
+        private System.Windows.Forms.ListBox lstMvZ3;
+        private System.Windows.Forms.ListBox lstAvC3;
+        private System.Windows.Forms.ListBox lstAvT3;
+        private System.Windows.Forms.ListBox lstComp3;
+        private System.Windows.Forms.ListBox lstGKM4;
+        private System.Windows.Forms.ListBox lstMvZ4;
+        private System.Windows.Forms.ListBox lstAvC4;
+        private System.Windows.Forms.ListBox lstAvT4;
+        private System.Windows.Forms.ListBox lstComp4;
+        private System.Windows.Forms.ListBox lstGKM5;
+        private System.Windows.Forms.ListBox lstMvZ5;
+        private System.Windows.Forms.ListBox lstAvC5;
+        private System.Windows.Forms.ListBox lstAvT5;
+        private System.Windows.Forms.ListBox lstComp5;
+        private System.Windows.Forms.ListBox lstGKM8;
+        private System.Windows.Forms.ListBox lstMvZ8;
+        private System.Windows.Forms.ListBox lstAvC8;
+        private System.Windows.Forms.ListBox lstAvT8;
+        private System.Windows.Forms.ListBox lstComp8;
+        private System.Windows.Forms.ListBox lstGKM7;
+        private System.Windows.Forms.ListBox lstMvZ7;
+        private System.Windows.Forms.ListBox lstAvC7;
+        private System.Windows.Forms.ListBox lstAvT7;
+        private System.Windows.Forms.ListBox lstComp7;
+        private System.Windows.Forms.ListBox lstGKM6;
+        private System.Windows.Forms.ListBox lstMvZ6;
+        private System.Windows.Forms.ListBox lstAvC6;
+        private System.Windows.Forms.ListBox lstAvT6;
+        private System.Windows.Forms.ListBox lstComp6;
     }
 }
 

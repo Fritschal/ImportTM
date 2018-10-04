@@ -26,18 +26,6 @@ namespace ImportTM
             InitializeComponent();
         }
 
-        private void btnSelectFile_Click(object sender, EventArgs e)
-        {
-            //Selecteer bestand:
-            if (openTM.FileName.Equals("<leeg>"))
-            {
-                openTM.FileName = "Toetsmatrijs";
-            }
-            openTM.ShowDialog();
-            txtFilenameTM.Text = openTM.FileName;
-
-        }
-
         private void releaseObject(object obj)
         {
             try
@@ -60,24 +48,28 @@ namespace ImportTM
         {
             //Initialiseren controls:
             intDoelen = 0;
-            for (int i = 1; i <= 8; i++)
+            foreach (Control ctrInstance in Controls)
             {
-                ((TextBox)Controls["txtLeerdoel" + Convert.ToString(i)]).Text = "";
-                ((TextBox)Controls["txtOnderwerpen" + Convert.ToString(i)]).Text = "";
-                ((TextBox)Controls["txtWeging" + Convert.ToString(i)]).Text = "";
-                ((TextBox)Controls["txtO" + Convert.ToString(i)]).Text = "";
-                ((TextBox)Controls["txtB" + Convert.ToString(i)]).Text = "";
-                ((TextBox)Controls["txtT" + Convert.ToString(i)]).Text = "";
-                ((TextBox)Controls["txtA" + Convert.ToString(i)]).Text = "";
-                ((TextBox)Controls["txtE" + Convert.ToString(i)]).Text = "";
-                ((TextBox)Controls["txtC" + Convert.ToString(i)]).Text = "";
-                ((TextBox)Controls["txtBoKSa" + Convert.ToString(i)]).Text = "";
-                ((TextBox)Controls["txtBoKSb" + Convert.ToString(i)]).Text = "";
-                ((TextBox)Controls["txtPKBoKSa" + Convert.ToString(i)]).Text = "";
-                ((TextBox)Controls["txtPKBoKSb" + Convert.ToString(i)]).Text = "";
-                ((ListBox)Controls["lstBoKSa" + Convert.ToString(i)]).Items.Clear();
-                ((ListBox)Controls["lstBoKSb" + Convert.ToString(i)]).Items.Clear();
+                switch (ctrInstance.GetType().Name)
+                {
+                    case "TextBox":
+                        ((TextBox)ctrInstance).Text = "";
+                        break;
+                    case "ListBox":
+                        ((ListBox)ctrInstance).Items.Clear();
+                        break;
+                    default:
+                        break;
+                }
             }
+
+            //Selecteer bestand:
+            if (openTM.FileName.Equals("<leeg>"))
+            {
+                openTM.FileName = "Toetsmatrijs";
+            }
+            openTM.ShowDialog();
+            txtFilenameTM.Text = openTM.FileName;
 
             //Open bestand:
             xlApplication = new Excel.Application();
@@ -422,14 +414,109 @@ namespace ImportTM
                 }
             }
 
+            //Competenties:
+            for (int intDoel = 1; intDoel <= intDoelen; intDoel++)
+            {
+                String strValue = "";
+                for (int intComp = 1; intComp <= 4; intComp++)
+                {
+                    String strCelComp = "O" + Convert.ToString(intDoel * 4 + intComp + 5);
+                    String strCelAvT = "P" + Convert.ToString(intDoel * 4 + intComp + 5);
+                    String strCelAvC = "Q" + Convert.ToString(intDoel * 4 + intComp + 5);
+                    String strCelMvZ = "R" + Convert.ToString(intDoel * 4 + intComp + 5);
+                    String strCelGKM = "S" + Convert.ToString(intDoel * 4 + intComp + 5);
+                    bool blnCompAanwezig = false;
+
+                    if (xlWorksheet.get_Range(strCelComp, strCelComp).Value2 != null)
+                    {
+                        strValue = xlWorksheet.get_Range(strCelComp, strCelComp).Value2.ToString();
+                        if (!strValue.Equals(""))
+                        {
+                            ((ListBox)Controls["lstComp" + Convert.ToString(intDoel)]).Items.Add(strValue);
+                            blnCompAanwezig = true;
+                        }
+                    }
+
+                    if (blnCompAanwezig)
+                    {
+                        //AvT:
+                        if (xlWorksheet.get_Range(strCelAvT, strCelAvT).Value2 != null)
+                        {
+                            strValue = xlWorksheet.get_Range(strCelAvT, strCelAvT).Value2.ToString();
+                            if (!strValue.Equals(""))
+                            {
+                                ((ListBox)Controls["lstAvT" + Convert.ToString(intDoel)]).Items.Add(strValue);
+                            }
+                            else
+                            {
+                                ((ListBox)Controls["lstAvT" + Convert.ToString(intDoel)]).Items.Add("???");
+                            }
+                        }
+                        else
+                        {
+                            ((ListBox)Controls["lstAvT" + Convert.ToString(intDoel)]).Items.Add("???");
+                        }
+
+                        //AvC:
+                        if (xlWorksheet.get_Range(strCelAvC, strCelAvC).Value2 != null)
+                        {
+                            strValue = xlWorksheet.get_Range(strCelAvC, strCelAvC).Value2.ToString();
+                            if (!strValue.Equals(""))
+                            {
+                                ((ListBox)Controls["lstAvC" + Convert.ToString(intDoel)]).Items.Add(strValue);
+                            }
+                            else
+                            {
+                                ((ListBox)Controls["lstAvC" + Convert.ToString(intDoel)]).Items.Add("???");
+                            }
+                        }
+                        else
+                        {
+                            ((ListBox)Controls["lstAvC" + Convert.ToString(intDoel)]).Items.Add("???");
+                        }
+
+                        //MvZ:
+                        if (xlWorksheet.get_Range(strCelMvZ, strCelMvZ).Value2 != null)
+                        {
+                            strValue = xlWorksheet.get_Range(strCelMvZ, strCelMvZ).Value2.ToString();
+                            if (!strValue.Equals(""))
+                            {
+                                ((ListBox)Controls["lstMvZ" + Convert.ToString(intDoel)]).Items.Add(strValue);
+                            }
+                            else
+                            {
+                                ((ListBox)Controls["lstMvZ" + Convert.ToString(intDoel)]).Items.Add("???");
+                            }
+                        }
+                        else
+                        {
+                            ((ListBox)Controls["lstMvZ" + Convert.ToString(intDoel)]).Items.Add("???");
+                        }
+
+                        //GKM:
+                        if (xlWorksheet.get_Range(strCelGKM, strCelGKM).Value2 != null)
+                        {
+                            strValue = xlWorksheet.get_Range(strCelGKM, strCelGKM).Value2.ToString();
+                            if (!strValue.Equals(""))
+                            {
+                                ((ListBox)Controls["lstGKM" + Convert.ToString(intDoel)]).Items.Add(strValue);
+                            }
+                            else
+                            {
+                                ((ListBox)Controls["lstGKM" + Convert.ToString(intDoel)]).Items.Add("???");
+                            }
+                        }
+                        else
+                        {
+                            ((ListBox)Controls["lstGKM" + Convert.ToString(intDoel)]).Items.Add("???");
+                        }
+                    }
+                }
+            }
 
 
 
-
-        }
-
-        private void btnCloseTM_Click(object sender, EventArgs e)
-        {
+            //Toetsmatrijs afsluiten...
             xlWorkbook.Close(true, misValue, misValue);
             xlApplication.Quit();
 
