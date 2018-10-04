@@ -18,7 +18,7 @@ namespace ImportTM
         Excel.Workbook xlWorkbook;
         Excel.Worksheet xlWorksheet;
         object misValue = System.Reflection.Missing.Value;
-        private SqlConnection cnnOnderwijs = new SqlConnection("Data Source=Mssql.aii.avans.nl;Initial Catalog=OnderwijsETTI;User ID=OnderwijsETTI;Password=ETTISecret;MultipleActiveResultSets=true;");
+        private SqlConnection cnnOnderwijs = new SqlConnection("Data Source=" + Globals.DB_SERVER + ";Initial Catalog=" + Globals.DB_NAME + ";User ID=" + Globals.DB_USER + ";Password=" + Globals.DB_PASSWORD + ";MultipleActiveResultSets=true;");
         private int intDoelen = 0;
 
         public frmImport()
