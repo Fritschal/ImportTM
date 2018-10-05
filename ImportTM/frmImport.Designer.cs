@@ -202,58 +202,62 @@
             this.lstAvC6 = new System.Windows.Forms.ListBox();
             this.lstAvT6 = new System.Windows.Forms.ListBox();
             this.lstComp6 = new System.Windows.Forms.ListBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lstToetscodes = new System.Windows.Forms.ListBox();
+            this.txtSucces = new System.Windows.Forms.TextBox();
+            this.txtFail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtFilenameTM
             // 
-            this.txtFilenameTM.Location = new System.Drawing.Point(167, 29);
+            this.txtFilenameTM.Location = new System.Drawing.Point(12, 45);
             this.txtFilenameTM.Name = "txtFilenameTM";
-            this.txtFilenameTM.Size = new System.Drawing.Size(357, 20);
+            this.txtFilenameTM.Size = new System.Drawing.Size(342, 20);
             this.txtFilenameTM.TabIndex = 1;
             // 
             // openTM
             // 
             this.openTM.FileName = "<leeg>";
             this.openTM.Filter = "Toetsmatrijzen|*.xlsx";
-            this.openTM.InitialDirectory = "D:\\Onderwijs\\OnderwijsETTI\\Import";
-            this.openTM.Title = "Selecteer Toetsmatrijs...";
+            this.openTM.InitialDirectory = "D:\\Onderwijs\\OnderwijsETTI\\Import\\Toetsmatrijzen";
+            this.openTM.Title = "Selecteer Toetsmatrijs zodat ik weet in welke map ik moet zoeken...";
             // 
             // btnOpenTM
             // 
-            this.btnOpenTM.Location = new System.Drawing.Point(12, 27);
+            this.btnOpenTM.Location = new System.Drawing.Point(12, 12);
             this.btnOpenTM.Name = "btnOpenTM";
-            this.btnOpenTM.Size = new System.Drawing.Size(149, 23);
+            this.btnOpenTM.Size = new System.Drawing.Size(342, 23);
             this.btnOpenTM.TabIndex = 2;
-            this.btnOpenTM.Text = "1: Open Toetsmatrijs";
-            this.btnOpenTM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOpenTM.Text = "Selecteer een toetsmatrijs uit de te verwerken map.";
             this.btnOpenTM.UseVisualStyleBackColor = true;
             this.btnOpenTM.Click += new System.EventHandler(this.btnOpenTM_Click);
             // 
             // txtToetscode
             // 
-            this.txtToetscode.Location = new System.Drawing.Point(167, 58);
+            this.txtToetscode.Location = new System.Drawing.Point(12, 121);
             this.txtToetscode.Name = "txtToetscode";
-            this.txtToetscode.Size = new System.Drawing.Size(357, 20);
+            this.txtToetscode.Size = new System.Drawing.Size(147, 20);
             this.txtToetscode.TabIndex = 3;
             // 
             // txtToetsvorm
             // 
-            this.txtToetsvorm.Location = new System.Drawing.Point(167, 84);
+            this.txtToetsvorm.Location = new System.Drawing.Point(12, 147);
             this.txtToetsvorm.Name = "txtToetsvorm";
-            this.txtToetsvorm.Size = new System.Drawing.Size(357, 20);
+            this.txtToetsvorm.Size = new System.Drawing.Size(147, 20);
             this.txtToetsvorm.TabIndex = 5;
             // 
             // txtPKToets
             // 
-            this.txtPKToets.Location = new System.Drawing.Point(726, 58);
+            this.txtPKToets.Location = new System.Drawing.Point(309, 121);
             this.txtPKToets.Name = "txtPKToets";
-            this.txtPKToets.Size = new System.Drawing.Size(156, 20);
+            this.txtPKToets.Size = new System.Drawing.Size(45, 20);
             this.txtPKToets.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(574, 61);
+            this.label1.Location = new System.Drawing.Point(168, 124);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 13);
             this.label1.TabIndex = 7;
@@ -262,7 +266,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(574, 87);
+            this.label2.Location = new System.Drawing.Point(168, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 13);
             this.label2.TabIndex = 9;
@@ -270,15 +274,15 @@
             // 
             // txtPKToetsvorm
             // 
-            this.txtPKToetsvorm.Location = new System.Drawing.Point(726, 84);
+            this.txtPKToetsvorm.Location = new System.Drawing.Point(309, 147);
             this.txtPKToetsvorm.Name = "txtPKToetsvorm";
-            this.txtPKToetsvorm.Size = new System.Drawing.Size(156, 20);
+            this.txtPKToetsvorm.Size = new System.Drawing.Size(45, 20);
             this.txtPKToetsvorm.TabIndex = 8;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(574, 113);
+            this.label3.Location = new System.Drawing.Point(168, 176);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 13);
             this.label3.TabIndex = 11;
@@ -286,317 +290,317 @@
             // 
             // txtPKBeoordelingswijze
             // 
-            this.txtPKBeoordelingswijze.Location = new System.Drawing.Point(726, 110);
+            this.txtPKBeoordelingswijze.Location = new System.Drawing.Point(309, 173);
             this.txtPKBeoordelingswijze.Name = "txtPKBeoordelingswijze";
-            this.txtPKBeoordelingswijze.Size = new System.Drawing.Size(156, 20);
+            this.txtPKBeoordelingswijze.Size = new System.Drawing.Size(45, 20);
             this.txtPKBeoordelingswijze.TabIndex = 10;
             // 
             // txtBeoordelingswijze
             // 
-            this.txtBeoordelingswijze.Location = new System.Drawing.Point(167, 113);
+            this.txtBeoordelingswijze.Location = new System.Drawing.Point(12, 173);
             this.txtBeoordelingswijze.Name = "txtBeoordelingswijze";
-            this.txtBeoordelingswijze.Size = new System.Drawing.Size(357, 20);
+            this.txtBeoordelingswijze.Size = new System.Drawing.Size(147, 20);
             this.txtBeoordelingswijze.TabIndex = 12;
             // 
             // txtLeerdoel1
             // 
-            this.txtLeerdoel1.Location = new System.Drawing.Point(12, 195);
+            this.txtLeerdoel1.Location = new System.Drawing.Point(12, 299);
             this.txtLeerdoel1.Multiline = true;
             this.txtLeerdoel1.Name = "txtLeerdoel1";
-            this.txtLeerdoel1.Size = new System.Drawing.Size(281, 54);
+            this.txtLeerdoel1.Size = new System.Drawing.Size(435, 54);
             this.txtLeerdoel1.TabIndex = 13;
             // 
             // txtLeerdoel2
             // 
-            this.txtLeerdoel2.Location = new System.Drawing.Point(12, 255);
+            this.txtLeerdoel2.Location = new System.Drawing.Point(12, 359);
             this.txtLeerdoel2.Multiline = true;
             this.txtLeerdoel2.Name = "txtLeerdoel2";
-            this.txtLeerdoel2.Size = new System.Drawing.Size(281, 54);
+            this.txtLeerdoel2.Size = new System.Drawing.Size(435, 54);
             this.txtLeerdoel2.TabIndex = 14;
             // 
             // txtLeerdoel3
             // 
-            this.txtLeerdoel3.Location = new System.Drawing.Point(12, 315);
+            this.txtLeerdoel3.Location = new System.Drawing.Point(12, 419);
             this.txtLeerdoel3.Multiline = true;
             this.txtLeerdoel3.Name = "txtLeerdoel3";
-            this.txtLeerdoel3.Size = new System.Drawing.Size(281, 54);
+            this.txtLeerdoel3.Size = new System.Drawing.Size(435, 54);
             this.txtLeerdoel3.TabIndex = 15;
             // 
             // txtLeerdoel4
             // 
-            this.txtLeerdoel4.Location = new System.Drawing.Point(12, 375);
+            this.txtLeerdoel4.Location = new System.Drawing.Point(12, 479);
             this.txtLeerdoel4.Multiline = true;
             this.txtLeerdoel4.Name = "txtLeerdoel4";
-            this.txtLeerdoel4.Size = new System.Drawing.Size(281, 54);
+            this.txtLeerdoel4.Size = new System.Drawing.Size(435, 54);
             this.txtLeerdoel4.TabIndex = 16;
             // 
             // txtLeerdoel5
             // 
-            this.txtLeerdoel5.Location = new System.Drawing.Point(12, 435);
+            this.txtLeerdoel5.Location = new System.Drawing.Point(12, 539);
             this.txtLeerdoel5.Multiline = true;
             this.txtLeerdoel5.Name = "txtLeerdoel5";
-            this.txtLeerdoel5.Size = new System.Drawing.Size(281, 54);
+            this.txtLeerdoel5.Size = new System.Drawing.Size(435, 54);
             this.txtLeerdoel5.TabIndex = 17;
             // 
             // txtLeerdoel6
             // 
-            this.txtLeerdoel6.Location = new System.Drawing.Point(12, 495);
+            this.txtLeerdoel6.Location = new System.Drawing.Point(12, 599);
             this.txtLeerdoel6.Multiline = true;
             this.txtLeerdoel6.Name = "txtLeerdoel6";
-            this.txtLeerdoel6.Size = new System.Drawing.Size(281, 54);
+            this.txtLeerdoel6.Size = new System.Drawing.Size(435, 54);
             this.txtLeerdoel6.TabIndex = 18;
             // 
             // txtLeerdoel8
             // 
-            this.txtLeerdoel8.Location = new System.Drawing.Point(12, 615);
+            this.txtLeerdoel8.Location = new System.Drawing.Point(12, 719);
             this.txtLeerdoel8.Multiline = true;
             this.txtLeerdoel8.Name = "txtLeerdoel8";
-            this.txtLeerdoel8.Size = new System.Drawing.Size(281, 54);
+            this.txtLeerdoel8.Size = new System.Drawing.Size(435, 54);
             this.txtLeerdoel8.TabIndex = 20;
             // 
             // txtLeerdoel7
             // 
-            this.txtLeerdoel7.Location = new System.Drawing.Point(12, 555);
+            this.txtLeerdoel7.Location = new System.Drawing.Point(12, 659);
             this.txtLeerdoel7.Multiline = true;
             this.txtLeerdoel7.Name = "txtLeerdoel7";
-            this.txtLeerdoel7.Size = new System.Drawing.Size(281, 54);
+            this.txtLeerdoel7.Size = new System.Drawing.Size(435, 54);
             this.txtLeerdoel7.TabIndex = 19;
             // 
             // txtOnderwerpen8
             // 
-            this.txtOnderwerpen8.Location = new System.Drawing.Point(299, 615);
+            this.txtOnderwerpen8.Location = new System.Drawing.Point(453, 719);
             this.txtOnderwerpen8.Multiline = true;
             this.txtOnderwerpen8.Name = "txtOnderwerpen8";
-            this.txtOnderwerpen8.Size = new System.Drawing.Size(282, 54);
+            this.txtOnderwerpen8.Size = new System.Drawing.Size(359, 54);
             this.txtOnderwerpen8.TabIndex = 28;
             // 
             // txtOnderwerpen7
             // 
-            this.txtOnderwerpen7.Location = new System.Drawing.Point(299, 555);
+            this.txtOnderwerpen7.Location = new System.Drawing.Point(453, 659);
             this.txtOnderwerpen7.Multiline = true;
             this.txtOnderwerpen7.Name = "txtOnderwerpen7";
-            this.txtOnderwerpen7.Size = new System.Drawing.Size(282, 54);
+            this.txtOnderwerpen7.Size = new System.Drawing.Size(359, 54);
             this.txtOnderwerpen7.TabIndex = 27;
             // 
             // txtOnderwerpen6
             // 
-            this.txtOnderwerpen6.Location = new System.Drawing.Point(299, 495);
+            this.txtOnderwerpen6.Location = new System.Drawing.Point(453, 599);
             this.txtOnderwerpen6.Multiline = true;
             this.txtOnderwerpen6.Name = "txtOnderwerpen6";
-            this.txtOnderwerpen6.Size = new System.Drawing.Size(282, 54);
+            this.txtOnderwerpen6.Size = new System.Drawing.Size(359, 54);
             this.txtOnderwerpen6.TabIndex = 26;
             // 
             // txtOnderwerpen5
             // 
-            this.txtOnderwerpen5.Location = new System.Drawing.Point(299, 435);
+            this.txtOnderwerpen5.Location = new System.Drawing.Point(453, 539);
             this.txtOnderwerpen5.Multiline = true;
             this.txtOnderwerpen5.Name = "txtOnderwerpen5";
-            this.txtOnderwerpen5.Size = new System.Drawing.Size(282, 54);
+            this.txtOnderwerpen5.Size = new System.Drawing.Size(359, 54);
             this.txtOnderwerpen5.TabIndex = 25;
             // 
             // txtOnderwerpen4
             // 
-            this.txtOnderwerpen4.Location = new System.Drawing.Point(299, 375);
+            this.txtOnderwerpen4.Location = new System.Drawing.Point(453, 479);
             this.txtOnderwerpen4.Multiline = true;
             this.txtOnderwerpen4.Name = "txtOnderwerpen4";
-            this.txtOnderwerpen4.Size = new System.Drawing.Size(282, 54);
+            this.txtOnderwerpen4.Size = new System.Drawing.Size(359, 54);
             this.txtOnderwerpen4.TabIndex = 24;
             // 
             // txtOnderwerpen3
             // 
-            this.txtOnderwerpen3.Location = new System.Drawing.Point(299, 315);
+            this.txtOnderwerpen3.Location = new System.Drawing.Point(453, 419);
             this.txtOnderwerpen3.Multiline = true;
             this.txtOnderwerpen3.Name = "txtOnderwerpen3";
-            this.txtOnderwerpen3.Size = new System.Drawing.Size(282, 54);
+            this.txtOnderwerpen3.Size = new System.Drawing.Size(359, 54);
             this.txtOnderwerpen3.TabIndex = 23;
             // 
             // txtOnderwerpen2
             // 
-            this.txtOnderwerpen2.Location = new System.Drawing.Point(299, 255);
+            this.txtOnderwerpen2.Location = new System.Drawing.Point(453, 359);
             this.txtOnderwerpen2.Multiline = true;
             this.txtOnderwerpen2.Name = "txtOnderwerpen2";
-            this.txtOnderwerpen2.Size = new System.Drawing.Size(282, 54);
+            this.txtOnderwerpen2.Size = new System.Drawing.Size(359, 54);
             this.txtOnderwerpen2.TabIndex = 22;
             // 
             // txtOnderwerpen1
             // 
-            this.txtOnderwerpen1.Location = new System.Drawing.Point(299, 195);
+            this.txtOnderwerpen1.Location = new System.Drawing.Point(453, 299);
             this.txtOnderwerpen1.Multiline = true;
             this.txtOnderwerpen1.Name = "txtOnderwerpen1";
-            this.txtOnderwerpen1.Size = new System.Drawing.Size(282, 54);
+            this.txtOnderwerpen1.Size = new System.Drawing.Size(359, 54);
             this.txtOnderwerpen1.TabIndex = 21;
             // 
             // txtBoKSa1
             // 
-            this.txtBoKSa1.Location = new System.Drawing.Point(587, 195);
+            this.txtBoKSa1.Location = new System.Drawing.Point(818, 299);
             this.txtBoKSa1.Name = "txtBoKSa1";
             this.txtBoKSa1.Size = new System.Drawing.Size(51, 20);
             this.txtBoKSa1.TabIndex = 29;
             // 
             // txtBoKSa2
             // 
-            this.txtBoKSa2.Location = new System.Drawing.Point(587, 255);
+            this.txtBoKSa2.Location = new System.Drawing.Point(818, 359);
             this.txtBoKSa2.Name = "txtBoKSa2";
             this.txtBoKSa2.Size = new System.Drawing.Size(51, 20);
             this.txtBoKSa2.TabIndex = 30;
             // 
             // txtBoKSa3
             // 
-            this.txtBoKSa3.Location = new System.Drawing.Point(587, 315);
+            this.txtBoKSa3.Location = new System.Drawing.Point(818, 419);
             this.txtBoKSa3.Name = "txtBoKSa3";
             this.txtBoKSa3.Size = new System.Drawing.Size(51, 20);
             this.txtBoKSa3.TabIndex = 31;
             // 
             // txtBoKSa4
             // 
-            this.txtBoKSa4.Location = new System.Drawing.Point(587, 375);
+            this.txtBoKSa4.Location = new System.Drawing.Point(818, 479);
             this.txtBoKSa4.Name = "txtBoKSa4";
             this.txtBoKSa4.Size = new System.Drawing.Size(51, 20);
             this.txtBoKSa4.TabIndex = 32;
             // 
             // txtBoKSa8
             // 
-            this.txtBoKSa8.Location = new System.Drawing.Point(587, 615);
+            this.txtBoKSa8.Location = new System.Drawing.Point(818, 719);
             this.txtBoKSa8.Name = "txtBoKSa8";
             this.txtBoKSa8.Size = new System.Drawing.Size(51, 20);
             this.txtBoKSa8.TabIndex = 36;
             // 
             // txtBoKSa7
             // 
-            this.txtBoKSa7.Location = new System.Drawing.Point(587, 555);
+            this.txtBoKSa7.Location = new System.Drawing.Point(818, 659);
             this.txtBoKSa7.Name = "txtBoKSa7";
             this.txtBoKSa7.Size = new System.Drawing.Size(51, 20);
             this.txtBoKSa7.TabIndex = 35;
             // 
             // txtBoKSa6
             // 
-            this.txtBoKSa6.Location = new System.Drawing.Point(587, 495);
+            this.txtBoKSa6.Location = new System.Drawing.Point(818, 599);
             this.txtBoKSa6.Name = "txtBoKSa6";
             this.txtBoKSa6.Size = new System.Drawing.Size(51, 20);
             this.txtBoKSa6.TabIndex = 34;
             // 
             // txtBoKSa5
             // 
-            this.txtBoKSa5.Location = new System.Drawing.Point(587, 435);
+            this.txtBoKSa5.Location = new System.Drawing.Point(818, 539);
             this.txtBoKSa5.Name = "txtBoKSa5";
             this.txtBoKSa5.Size = new System.Drawing.Size(51, 20);
             this.txtBoKSa5.TabIndex = 33;
             // 
             // txtBoKSb8
             // 
-            this.txtBoKSb8.Location = new System.Drawing.Point(587, 641);
+            this.txtBoKSb8.Location = new System.Drawing.Point(818, 745);
             this.txtBoKSb8.Name = "txtBoKSb8";
             this.txtBoKSb8.Size = new System.Drawing.Size(51, 20);
             this.txtBoKSb8.TabIndex = 44;
             // 
             // txtBoKSb7
             // 
-            this.txtBoKSb7.Location = new System.Drawing.Point(587, 581);
+            this.txtBoKSb7.Location = new System.Drawing.Point(818, 685);
             this.txtBoKSb7.Name = "txtBoKSb7";
             this.txtBoKSb7.Size = new System.Drawing.Size(51, 20);
             this.txtBoKSb7.TabIndex = 43;
             // 
             // txtBoKSb6
             // 
-            this.txtBoKSb6.Location = new System.Drawing.Point(587, 521);
+            this.txtBoKSb6.Location = new System.Drawing.Point(818, 625);
             this.txtBoKSb6.Name = "txtBoKSb6";
             this.txtBoKSb6.Size = new System.Drawing.Size(51, 20);
             this.txtBoKSb6.TabIndex = 42;
             // 
             // txtBoKSb5
             // 
-            this.txtBoKSb5.Location = new System.Drawing.Point(587, 461);
+            this.txtBoKSb5.Location = new System.Drawing.Point(818, 565);
             this.txtBoKSb5.Name = "txtBoKSb5";
             this.txtBoKSb5.Size = new System.Drawing.Size(51, 20);
             this.txtBoKSb5.TabIndex = 41;
             // 
             // txtBoKSb4
             // 
-            this.txtBoKSb4.Location = new System.Drawing.Point(587, 401);
+            this.txtBoKSb4.Location = new System.Drawing.Point(818, 505);
             this.txtBoKSb4.Name = "txtBoKSb4";
             this.txtBoKSb4.Size = new System.Drawing.Size(51, 20);
             this.txtBoKSb4.TabIndex = 40;
             // 
             // txtBoKSb3
             // 
-            this.txtBoKSb3.Location = new System.Drawing.Point(587, 341);
+            this.txtBoKSb3.Location = new System.Drawing.Point(818, 445);
             this.txtBoKSb3.Name = "txtBoKSb3";
             this.txtBoKSb3.Size = new System.Drawing.Size(51, 20);
             this.txtBoKSb3.TabIndex = 39;
             // 
             // txtBoKSb2
             // 
-            this.txtBoKSb2.Location = new System.Drawing.Point(587, 281);
+            this.txtBoKSb2.Location = new System.Drawing.Point(818, 385);
             this.txtBoKSb2.Name = "txtBoKSb2";
             this.txtBoKSb2.Size = new System.Drawing.Size(51, 20);
             this.txtBoKSb2.TabIndex = 38;
             // 
             // txtBoKSb1
             // 
-            this.txtBoKSb1.Location = new System.Drawing.Point(587, 221);
+            this.txtBoKSb1.Location = new System.Drawing.Point(818, 325);
             this.txtBoKSb1.Name = "txtBoKSb1";
             this.txtBoKSb1.Size = new System.Drawing.Size(51, 20);
             this.txtBoKSb1.TabIndex = 37;
             // 
             // txtWeging8
             // 
-            this.txtWeging8.Location = new System.Drawing.Point(818, 615);
+            this.txtWeging8.Location = new System.Drawing.Point(1049, 719);
             this.txtWeging8.Name = "txtWeging8";
             this.txtWeging8.Size = new System.Drawing.Size(36, 20);
             this.txtWeging8.TabIndex = 52;
             // 
             // txtWeging7
             // 
-            this.txtWeging7.Location = new System.Drawing.Point(818, 555);
+            this.txtWeging7.Location = new System.Drawing.Point(1049, 659);
             this.txtWeging7.Name = "txtWeging7";
             this.txtWeging7.Size = new System.Drawing.Size(36, 20);
             this.txtWeging7.TabIndex = 51;
             // 
             // txtWeging6
             // 
-            this.txtWeging6.Location = new System.Drawing.Point(818, 495);
+            this.txtWeging6.Location = new System.Drawing.Point(1049, 599);
             this.txtWeging6.Name = "txtWeging6";
             this.txtWeging6.Size = new System.Drawing.Size(36, 20);
             this.txtWeging6.TabIndex = 50;
             // 
             // txtWeging5
             // 
-            this.txtWeging5.Location = new System.Drawing.Point(818, 435);
+            this.txtWeging5.Location = new System.Drawing.Point(1049, 539);
             this.txtWeging5.Name = "txtWeging5";
             this.txtWeging5.Size = new System.Drawing.Size(36, 20);
             this.txtWeging5.TabIndex = 49;
             // 
             // txtWeging4
             // 
-            this.txtWeging4.Location = new System.Drawing.Point(818, 375);
+            this.txtWeging4.Location = new System.Drawing.Point(1049, 479);
             this.txtWeging4.Name = "txtWeging4";
             this.txtWeging4.Size = new System.Drawing.Size(36, 20);
             this.txtWeging4.TabIndex = 48;
             // 
             // txtWeging3
             // 
-            this.txtWeging3.Location = new System.Drawing.Point(818, 315);
+            this.txtWeging3.Location = new System.Drawing.Point(1049, 419);
             this.txtWeging3.Name = "txtWeging3";
             this.txtWeging3.Size = new System.Drawing.Size(36, 20);
             this.txtWeging3.TabIndex = 47;
             // 
             // txtWeging2
             // 
-            this.txtWeging2.Location = new System.Drawing.Point(818, 255);
+            this.txtWeging2.Location = new System.Drawing.Point(1049, 359);
             this.txtWeging2.Name = "txtWeging2";
             this.txtWeging2.Size = new System.Drawing.Size(36, 20);
             this.txtWeging2.TabIndex = 46;
             // 
             // txtWeging1
             // 
-            this.txtWeging1.Location = new System.Drawing.Point(818, 195);
+            this.txtWeging1.Location = new System.Drawing.Point(1049, 299);
             this.txtWeging1.Name = "txtWeging1";
             this.txtWeging1.Size = new System.Drawing.Size(36, 20);
             this.txtWeging1.TabIndex = 45;
             // 
             // txtO8
             // 
-            this.txtO8.Location = new System.Drawing.Point(860, 615);
+            this.txtO8.Location = new System.Drawing.Point(1091, 719);
             this.txtO8.Name = "txtO8";
             this.txtO8.Size = new System.Drawing.Size(20, 20);
             this.txtO8.TabIndex = 60;
@@ -604,7 +608,7 @@
             // 
             // txtO7
             // 
-            this.txtO7.Location = new System.Drawing.Point(860, 555);
+            this.txtO7.Location = new System.Drawing.Point(1091, 659);
             this.txtO7.Name = "txtO7";
             this.txtO7.Size = new System.Drawing.Size(20, 20);
             this.txtO7.TabIndex = 59;
@@ -612,7 +616,7 @@
             // 
             // txtO6
             // 
-            this.txtO6.Location = new System.Drawing.Point(860, 495);
+            this.txtO6.Location = new System.Drawing.Point(1091, 599);
             this.txtO6.Name = "txtO6";
             this.txtO6.Size = new System.Drawing.Size(20, 20);
             this.txtO6.TabIndex = 58;
@@ -620,7 +624,7 @@
             // 
             // txtO5
             // 
-            this.txtO5.Location = new System.Drawing.Point(860, 435);
+            this.txtO5.Location = new System.Drawing.Point(1091, 539);
             this.txtO5.Name = "txtO5";
             this.txtO5.Size = new System.Drawing.Size(20, 20);
             this.txtO5.TabIndex = 57;
@@ -628,7 +632,7 @@
             // 
             // txtO4
             // 
-            this.txtO4.Location = new System.Drawing.Point(860, 375);
+            this.txtO4.Location = new System.Drawing.Point(1091, 479);
             this.txtO4.Name = "txtO4";
             this.txtO4.Size = new System.Drawing.Size(20, 20);
             this.txtO4.TabIndex = 56;
@@ -636,7 +640,7 @@
             // 
             // txtO3
             // 
-            this.txtO3.Location = new System.Drawing.Point(860, 315);
+            this.txtO3.Location = new System.Drawing.Point(1091, 419);
             this.txtO3.Name = "txtO3";
             this.txtO3.Size = new System.Drawing.Size(20, 20);
             this.txtO3.TabIndex = 55;
@@ -644,7 +648,7 @@
             // 
             // txtO2
             // 
-            this.txtO2.Location = new System.Drawing.Point(860, 255);
+            this.txtO2.Location = new System.Drawing.Point(1091, 359);
             this.txtO2.Name = "txtO2";
             this.txtO2.Size = new System.Drawing.Size(20, 20);
             this.txtO2.TabIndex = 54;
@@ -652,7 +656,7 @@
             // 
             // txtO1
             // 
-            this.txtO1.Location = new System.Drawing.Point(860, 195);
+            this.txtO1.Location = new System.Drawing.Point(1091, 299);
             this.txtO1.Name = "txtO1";
             this.txtO1.Size = new System.Drawing.Size(20, 20);
             this.txtO1.TabIndex = 53;
@@ -660,7 +664,7 @@
             // 
             // txtB8
             // 
-            this.txtB8.Location = new System.Drawing.Point(886, 615);
+            this.txtB8.Location = new System.Drawing.Point(1117, 719);
             this.txtB8.Name = "txtB8";
             this.txtB8.Size = new System.Drawing.Size(20, 20);
             this.txtB8.TabIndex = 68;
@@ -668,7 +672,7 @@
             // 
             // txtB7
             // 
-            this.txtB7.Location = new System.Drawing.Point(886, 555);
+            this.txtB7.Location = new System.Drawing.Point(1117, 659);
             this.txtB7.Name = "txtB7";
             this.txtB7.Size = new System.Drawing.Size(20, 20);
             this.txtB7.TabIndex = 67;
@@ -676,7 +680,7 @@
             // 
             // txtB6
             // 
-            this.txtB6.Location = new System.Drawing.Point(886, 495);
+            this.txtB6.Location = new System.Drawing.Point(1117, 599);
             this.txtB6.Name = "txtB6";
             this.txtB6.Size = new System.Drawing.Size(20, 20);
             this.txtB6.TabIndex = 66;
@@ -684,7 +688,7 @@
             // 
             // txtB5
             // 
-            this.txtB5.Location = new System.Drawing.Point(886, 435);
+            this.txtB5.Location = new System.Drawing.Point(1117, 539);
             this.txtB5.Name = "txtB5";
             this.txtB5.Size = new System.Drawing.Size(20, 20);
             this.txtB5.TabIndex = 65;
@@ -692,7 +696,7 @@
             // 
             // txtB4
             // 
-            this.txtB4.Location = new System.Drawing.Point(886, 375);
+            this.txtB4.Location = new System.Drawing.Point(1117, 479);
             this.txtB4.Name = "txtB4";
             this.txtB4.Size = new System.Drawing.Size(20, 20);
             this.txtB4.TabIndex = 64;
@@ -700,7 +704,7 @@
             // 
             // txtB3
             // 
-            this.txtB3.Location = new System.Drawing.Point(886, 315);
+            this.txtB3.Location = new System.Drawing.Point(1117, 419);
             this.txtB3.Name = "txtB3";
             this.txtB3.Size = new System.Drawing.Size(20, 20);
             this.txtB3.TabIndex = 63;
@@ -708,7 +712,7 @@
             // 
             // txtB2
             // 
-            this.txtB2.Location = new System.Drawing.Point(886, 255);
+            this.txtB2.Location = new System.Drawing.Point(1117, 359);
             this.txtB2.Name = "txtB2";
             this.txtB2.Size = new System.Drawing.Size(20, 20);
             this.txtB2.TabIndex = 62;
@@ -716,7 +720,7 @@
             // 
             // txtB1
             // 
-            this.txtB1.Location = new System.Drawing.Point(886, 195);
+            this.txtB1.Location = new System.Drawing.Point(1117, 299);
             this.txtB1.Name = "txtB1";
             this.txtB1.Size = new System.Drawing.Size(20, 20);
             this.txtB1.TabIndex = 61;
@@ -724,7 +728,7 @@
             // 
             // txtT8
             // 
-            this.txtT8.Location = new System.Drawing.Point(912, 615);
+            this.txtT8.Location = new System.Drawing.Point(1143, 719);
             this.txtT8.Name = "txtT8";
             this.txtT8.Size = new System.Drawing.Size(20, 20);
             this.txtT8.TabIndex = 76;
@@ -732,7 +736,7 @@
             // 
             // txtT7
             // 
-            this.txtT7.Location = new System.Drawing.Point(912, 555);
+            this.txtT7.Location = new System.Drawing.Point(1143, 659);
             this.txtT7.Name = "txtT7";
             this.txtT7.Size = new System.Drawing.Size(20, 20);
             this.txtT7.TabIndex = 75;
@@ -740,7 +744,7 @@
             // 
             // txtT6
             // 
-            this.txtT6.Location = new System.Drawing.Point(912, 495);
+            this.txtT6.Location = new System.Drawing.Point(1143, 599);
             this.txtT6.Name = "txtT6";
             this.txtT6.Size = new System.Drawing.Size(20, 20);
             this.txtT6.TabIndex = 74;
@@ -748,7 +752,7 @@
             // 
             // txtT5
             // 
-            this.txtT5.Location = new System.Drawing.Point(912, 435);
+            this.txtT5.Location = new System.Drawing.Point(1143, 539);
             this.txtT5.Name = "txtT5";
             this.txtT5.Size = new System.Drawing.Size(20, 20);
             this.txtT5.TabIndex = 73;
@@ -756,7 +760,7 @@
             // 
             // txtT4
             // 
-            this.txtT4.Location = new System.Drawing.Point(912, 375);
+            this.txtT4.Location = new System.Drawing.Point(1143, 479);
             this.txtT4.Name = "txtT4";
             this.txtT4.Size = new System.Drawing.Size(20, 20);
             this.txtT4.TabIndex = 72;
@@ -764,7 +768,7 @@
             // 
             // txtT3
             // 
-            this.txtT3.Location = new System.Drawing.Point(912, 315);
+            this.txtT3.Location = new System.Drawing.Point(1143, 419);
             this.txtT3.Name = "txtT3";
             this.txtT3.Size = new System.Drawing.Size(20, 20);
             this.txtT3.TabIndex = 71;
@@ -772,7 +776,7 @@
             // 
             // txtT2
             // 
-            this.txtT2.Location = new System.Drawing.Point(912, 255);
+            this.txtT2.Location = new System.Drawing.Point(1143, 359);
             this.txtT2.Name = "txtT2";
             this.txtT2.Size = new System.Drawing.Size(20, 20);
             this.txtT2.TabIndex = 70;
@@ -780,7 +784,7 @@
             // 
             // txtT1
             // 
-            this.txtT1.Location = new System.Drawing.Point(912, 195);
+            this.txtT1.Location = new System.Drawing.Point(1143, 299);
             this.txtT1.Name = "txtT1";
             this.txtT1.Size = new System.Drawing.Size(20, 20);
             this.txtT1.TabIndex = 69;
@@ -788,7 +792,7 @@
             // 
             // txtA8
             // 
-            this.txtA8.Location = new System.Drawing.Point(938, 615);
+            this.txtA8.Location = new System.Drawing.Point(1169, 719);
             this.txtA8.Name = "txtA8";
             this.txtA8.Size = new System.Drawing.Size(20, 20);
             this.txtA8.TabIndex = 84;
@@ -796,7 +800,7 @@
             // 
             // txtA7
             // 
-            this.txtA7.Location = new System.Drawing.Point(938, 555);
+            this.txtA7.Location = new System.Drawing.Point(1169, 659);
             this.txtA7.Name = "txtA7";
             this.txtA7.Size = new System.Drawing.Size(20, 20);
             this.txtA7.TabIndex = 83;
@@ -804,7 +808,7 @@
             // 
             // txtA6
             // 
-            this.txtA6.Location = new System.Drawing.Point(938, 495);
+            this.txtA6.Location = new System.Drawing.Point(1169, 599);
             this.txtA6.Name = "txtA6";
             this.txtA6.Size = new System.Drawing.Size(20, 20);
             this.txtA6.TabIndex = 82;
@@ -812,7 +816,7 @@
             // 
             // txtA5
             // 
-            this.txtA5.Location = new System.Drawing.Point(938, 435);
+            this.txtA5.Location = new System.Drawing.Point(1169, 539);
             this.txtA5.Name = "txtA5";
             this.txtA5.Size = new System.Drawing.Size(20, 20);
             this.txtA5.TabIndex = 81;
@@ -820,7 +824,7 @@
             // 
             // txtA4
             // 
-            this.txtA4.Location = new System.Drawing.Point(938, 375);
+            this.txtA4.Location = new System.Drawing.Point(1169, 479);
             this.txtA4.Name = "txtA4";
             this.txtA4.Size = new System.Drawing.Size(20, 20);
             this.txtA4.TabIndex = 80;
@@ -828,7 +832,7 @@
             // 
             // txtA3
             // 
-            this.txtA3.Location = new System.Drawing.Point(938, 315);
+            this.txtA3.Location = new System.Drawing.Point(1169, 419);
             this.txtA3.Name = "txtA3";
             this.txtA3.Size = new System.Drawing.Size(20, 20);
             this.txtA3.TabIndex = 79;
@@ -836,7 +840,7 @@
             // 
             // txtA2
             // 
-            this.txtA2.Location = new System.Drawing.Point(938, 255);
+            this.txtA2.Location = new System.Drawing.Point(1169, 359);
             this.txtA2.Name = "txtA2";
             this.txtA2.Size = new System.Drawing.Size(20, 20);
             this.txtA2.TabIndex = 78;
@@ -844,7 +848,7 @@
             // 
             // txtA1
             // 
-            this.txtA1.Location = new System.Drawing.Point(938, 195);
+            this.txtA1.Location = new System.Drawing.Point(1169, 299);
             this.txtA1.Name = "txtA1";
             this.txtA1.Size = new System.Drawing.Size(20, 20);
             this.txtA1.TabIndex = 77;
@@ -852,7 +856,7 @@
             // 
             // txtE8
             // 
-            this.txtE8.Location = new System.Drawing.Point(964, 615);
+            this.txtE8.Location = new System.Drawing.Point(1195, 719);
             this.txtE8.Name = "txtE8";
             this.txtE8.Size = new System.Drawing.Size(20, 20);
             this.txtE8.TabIndex = 92;
@@ -860,7 +864,7 @@
             // 
             // txtE7
             // 
-            this.txtE7.Location = new System.Drawing.Point(964, 555);
+            this.txtE7.Location = new System.Drawing.Point(1195, 659);
             this.txtE7.Name = "txtE7";
             this.txtE7.Size = new System.Drawing.Size(20, 20);
             this.txtE7.TabIndex = 91;
@@ -868,7 +872,7 @@
             // 
             // txtE6
             // 
-            this.txtE6.Location = new System.Drawing.Point(964, 495);
+            this.txtE6.Location = new System.Drawing.Point(1195, 599);
             this.txtE6.Name = "txtE6";
             this.txtE6.Size = new System.Drawing.Size(20, 20);
             this.txtE6.TabIndex = 90;
@@ -876,7 +880,7 @@
             // 
             // txtE5
             // 
-            this.txtE5.Location = new System.Drawing.Point(964, 435);
+            this.txtE5.Location = new System.Drawing.Point(1195, 539);
             this.txtE5.Name = "txtE5";
             this.txtE5.Size = new System.Drawing.Size(20, 20);
             this.txtE5.TabIndex = 89;
@@ -884,7 +888,7 @@
             // 
             // txtE4
             // 
-            this.txtE4.Location = new System.Drawing.Point(964, 375);
+            this.txtE4.Location = new System.Drawing.Point(1195, 479);
             this.txtE4.Name = "txtE4";
             this.txtE4.Size = new System.Drawing.Size(20, 20);
             this.txtE4.TabIndex = 88;
@@ -892,7 +896,7 @@
             // 
             // txtE3
             // 
-            this.txtE3.Location = new System.Drawing.Point(964, 315);
+            this.txtE3.Location = new System.Drawing.Point(1195, 419);
             this.txtE3.Name = "txtE3";
             this.txtE3.Size = new System.Drawing.Size(20, 20);
             this.txtE3.TabIndex = 87;
@@ -900,7 +904,7 @@
             // 
             // txtE2
             // 
-            this.txtE2.Location = new System.Drawing.Point(964, 255);
+            this.txtE2.Location = new System.Drawing.Point(1195, 359);
             this.txtE2.Name = "txtE2";
             this.txtE2.Size = new System.Drawing.Size(20, 20);
             this.txtE2.TabIndex = 86;
@@ -908,7 +912,7 @@
             // 
             // txtE1
             // 
-            this.txtE1.Location = new System.Drawing.Point(964, 195);
+            this.txtE1.Location = new System.Drawing.Point(1195, 299);
             this.txtE1.Name = "txtE1";
             this.txtE1.Size = new System.Drawing.Size(20, 20);
             this.txtE1.TabIndex = 85;
@@ -916,7 +920,7 @@
             // 
             // txtC8
             // 
-            this.txtC8.Location = new System.Drawing.Point(990, 615);
+            this.txtC8.Location = new System.Drawing.Point(1221, 719);
             this.txtC8.Name = "txtC8";
             this.txtC8.Size = new System.Drawing.Size(20, 20);
             this.txtC8.TabIndex = 100;
@@ -924,7 +928,7 @@
             // 
             // txtC7
             // 
-            this.txtC7.Location = new System.Drawing.Point(990, 555);
+            this.txtC7.Location = new System.Drawing.Point(1221, 659);
             this.txtC7.Name = "txtC7";
             this.txtC7.Size = new System.Drawing.Size(20, 20);
             this.txtC7.TabIndex = 99;
@@ -932,7 +936,7 @@
             // 
             // txtC6
             // 
-            this.txtC6.Location = new System.Drawing.Point(990, 495);
+            this.txtC6.Location = new System.Drawing.Point(1221, 599);
             this.txtC6.Name = "txtC6";
             this.txtC6.Size = new System.Drawing.Size(20, 20);
             this.txtC6.TabIndex = 98;
@@ -940,7 +944,7 @@
             // 
             // txtC5
             // 
-            this.txtC5.Location = new System.Drawing.Point(990, 435);
+            this.txtC5.Location = new System.Drawing.Point(1221, 539);
             this.txtC5.Name = "txtC5";
             this.txtC5.Size = new System.Drawing.Size(20, 20);
             this.txtC5.TabIndex = 97;
@@ -948,7 +952,7 @@
             // 
             // txtC4
             // 
-            this.txtC4.Location = new System.Drawing.Point(990, 375);
+            this.txtC4.Location = new System.Drawing.Point(1221, 479);
             this.txtC4.Name = "txtC4";
             this.txtC4.Size = new System.Drawing.Size(20, 20);
             this.txtC4.TabIndex = 96;
@@ -956,7 +960,7 @@
             // 
             // txtC3
             // 
-            this.txtC3.Location = new System.Drawing.Point(990, 315);
+            this.txtC3.Location = new System.Drawing.Point(1221, 419);
             this.txtC3.Name = "txtC3";
             this.txtC3.Size = new System.Drawing.Size(20, 20);
             this.txtC3.TabIndex = 95;
@@ -964,7 +968,7 @@
             // 
             // txtC2
             // 
-            this.txtC2.Location = new System.Drawing.Point(990, 255);
+            this.txtC2.Location = new System.Drawing.Point(1221, 359);
             this.txtC2.Name = "txtC2";
             this.txtC2.Size = new System.Drawing.Size(20, 20);
             this.txtC2.TabIndex = 94;
@@ -972,7 +976,7 @@
             // 
             // txtC1
             // 
-            this.txtC1.Location = new System.Drawing.Point(990, 195);
+            this.txtC1.Location = new System.Drawing.Point(1221, 299);
             this.txtC1.Name = "txtC1";
             this.txtC1.Size = new System.Drawing.Size(20, 20);
             this.txtC1.TabIndex = 93;
@@ -980,112 +984,112 @@
             // 
             // txtPKBoKSb8
             // 
-            this.txtPKBoKSb8.Location = new System.Drawing.Point(644, 641);
+            this.txtPKBoKSb8.Location = new System.Drawing.Point(875, 745);
             this.txtPKBoKSb8.Name = "txtPKBoKSb8";
             this.txtPKBoKSb8.Size = new System.Drawing.Size(51, 20);
             this.txtPKBoKSb8.TabIndex = 116;
             // 
             // txtPKBoKSb7
             // 
-            this.txtPKBoKSb7.Location = new System.Drawing.Point(644, 581);
+            this.txtPKBoKSb7.Location = new System.Drawing.Point(875, 685);
             this.txtPKBoKSb7.Name = "txtPKBoKSb7";
             this.txtPKBoKSb7.Size = new System.Drawing.Size(51, 20);
             this.txtPKBoKSb7.TabIndex = 115;
             // 
             // txtPKBoKSb6
             // 
-            this.txtPKBoKSb6.Location = new System.Drawing.Point(644, 521);
+            this.txtPKBoKSb6.Location = new System.Drawing.Point(875, 625);
             this.txtPKBoKSb6.Name = "txtPKBoKSb6";
             this.txtPKBoKSb6.Size = new System.Drawing.Size(51, 20);
             this.txtPKBoKSb6.TabIndex = 114;
             // 
             // txtPKBoKSb5
             // 
-            this.txtPKBoKSb5.Location = new System.Drawing.Point(644, 461);
+            this.txtPKBoKSb5.Location = new System.Drawing.Point(875, 565);
             this.txtPKBoKSb5.Name = "txtPKBoKSb5";
             this.txtPKBoKSb5.Size = new System.Drawing.Size(51, 20);
             this.txtPKBoKSb5.TabIndex = 113;
             // 
             // txtPKBoKSb4
             // 
-            this.txtPKBoKSb4.Location = new System.Drawing.Point(644, 401);
+            this.txtPKBoKSb4.Location = new System.Drawing.Point(875, 505);
             this.txtPKBoKSb4.Name = "txtPKBoKSb4";
             this.txtPKBoKSb4.Size = new System.Drawing.Size(51, 20);
             this.txtPKBoKSb4.TabIndex = 112;
             // 
             // txtPKBoKSb3
             // 
-            this.txtPKBoKSb3.Location = new System.Drawing.Point(644, 341);
+            this.txtPKBoKSb3.Location = new System.Drawing.Point(875, 445);
             this.txtPKBoKSb3.Name = "txtPKBoKSb3";
             this.txtPKBoKSb3.Size = new System.Drawing.Size(51, 20);
             this.txtPKBoKSb3.TabIndex = 111;
             // 
             // txtPKBoKSb2
             // 
-            this.txtPKBoKSb2.Location = new System.Drawing.Point(644, 281);
+            this.txtPKBoKSb2.Location = new System.Drawing.Point(875, 385);
             this.txtPKBoKSb2.Name = "txtPKBoKSb2";
             this.txtPKBoKSb2.Size = new System.Drawing.Size(51, 20);
             this.txtPKBoKSb2.TabIndex = 110;
             // 
             // txtPKBoKSb1
             // 
-            this.txtPKBoKSb1.Location = new System.Drawing.Point(644, 221);
+            this.txtPKBoKSb1.Location = new System.Drawing.Point(875, 325);
             this.txtPKBoKSb1.Name = "txtPKBoKSb1";
             this.txtPKBoKSb1.Size = new System.Drawing.Size(51, 20);
             this.txtPKBoKSb1.TabIndex = 109;
             // 
             // txtPKBoKSa8
             // 
-            this.txtPKBoKSa8.Location = new System.Drawing.Point(644, 615);
+            this.txtPKBoKSa8.Location = new System.Drawing.Point(875, 719);
             this.txtPKBoKSa8.Name = "txtPKBoKSa8";
             this.txtPKBoKSa8.Size = new System.Drawing.Size(51, 20);
             this.txtPKBoKSa8.TabIndex = 108;
             // 
             // txtPKBoKSa7
             // 
-            this.txtPKBoKSa7.Location = new System.Drawing.Point(644, 555);
+            this.txtPKBoKSa7.Location = new System.Drawing.Point(875, 659);
             this.txtPKBoKSa7.Name = "txtPKBoKSa7";
             this.txtPKBoKSa7.Size = new System.Drawing.Size(51, 20);
             this.txtPKBoKSa7.TabIndex = 107;
             // 
             // txtPKBoKSa6
             // 
-            this.txtPKBoKSa6.Location = new System.Drawing.Point(644, 495);
+            this.txtPKBoKSa6.Location = new System.Drawing.Point(875, 599);
             this.txtPKBoKSa6.Name = "txtPKBoKSa6";
             this.txtPKBoKSa6.Size = new System.Drawing.Size(51, 20);
             this.txtPKBoKSa6.TabIndex = 106;
             // 
             // txtPKBoKSa5
             // 
-            this.txtPKBoKSa5.Location = new System.Drawing.Point(644, 435);
+            this.txtPKBoKSa5.Location = new System.Drawing.Point(875, 539);
             this.txtPKBoKSa5.Name = "txtPKBoKSa5";
             this.txtPKBoKSa5.Size = new System.Drawing.Size(51, 20);
             this.txtPKBoKSa5.TabIndex = 105;
             // 
             // txtPKBoKSa4
             // 
-            this.txtPKBoKSa4.Location = new System.Drawing.Point(644, 375);
+            this.txtPKBoKSa4.Location = new System.Drawing.Point(875, 479);
             this.txtPKBoKSa4.Name = "txtPKBoKSa4";
             this.txtPKBoKSa4.Size = new System.Drawing.Size(51, 20);
             this.txtPKBoKSa4.TabIndex = 104;
             // 
             // txtPKBoKSa3
             // 
-            this.txtPKBoKSa3.Location = new System.Drawing.Point(644, 315);
+            this.txtPKBoKSa3.Location = new System.Drawing.Point(875, 419);
             this.txtPKBoKSa3.Name = "txtPKBoKSa3";
             this.txtPKBoKSa3.Size = new System.Drawing.Size(51, 20);
             this.txtPKBoKSa3.TabIndex = 103;
             // 
             // txtPKBoKSa2
             // 
-            this.txtPKBoKSa2.Location = new System.Drawing.Point(644, 255);
+            this.txtPKBoKSa2.Location = new System.Drawing.Point(875, 359);
             this.txtPKBoKSa2.Name = "txtPKBoKSa2";
             this.txtPKBoKSa2.Size = new System.Drawing.Size(51, 20);
             this.txtPKBoKSa2.TabIndex = 102;
             // 
             // txtPKBoKSa1
             // 
-            this.txtPKBoKSa1.Location = new System.Drawing.Point(644, 195);
+            this.txtPKBoKSa1.Location = new System.Drawing.Point(875, 299);
             this.txtPKBoKSa1.Name = "txtPKBoKSa1";
             this.txtPKBoKSa1.Size = new System.Drawing.Size(51, 20);
             this.txtPKBoKSa1.TabIndex = 101;
@@ -1093,7 +1097,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(644, 166);
+            this.label4.Location = new System.Drawing.Point(875, 268);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 13);
             this.label4.TabIndex = 117;
@@ -1102,7 +1106,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(644, 179);
+            this.label5.Location = new System.Drawing.Point(875, 282);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 13);
             this.label5.TabIndex = 118;
@@ -1111,7 +1115,7 @@
             // lstBoKSa1
             // 
             this.lstBoKSa1.FormattingEnabled = true;
-            this.lstBoKSa1.Location = new System.Drawing.Point(700, 195);
+            this.lstBoKSa1.Location = new System.Drawing.Point(931, 299);
             this.lstBoKSa1.Name = "lstBoKSa1";
             this.lstBoKSa1.Size = new System.Drawing.Size(53, 56);
             this.lstBoKSa1.TabIndex = 119;
@@ -1119,7 +1123,7 @@
             // lstBoKSb1
             // 
             this.lstBoKSb1.FormattingEnabled = true;
-            this.lstBoKSb1.Location = new System.Drawing.Point(759, 195);
+            this.lstBoKSb1.Location = new System.Drawing.Point(990, 299);
             this.lstBoKSb1.Name = "lstBoKSb1";
             this.lstBoKSb1.Size = new System.Drawing.Size(53, 56);
             this.lstBoKSb1.TabIndex = 120;
@@ -1127,7 +1131,7 @@
             // lstBoKSb2
             // 
             this.lstBoKSb2.FormattingEnabled = true;
-            this.lstBoKSb2.Location = new System.Drawing.Point(760, 255);
+            this.lstBoKSb2.Location = new System.Drawing.Point(991, 359);
             this.lstBoKSb2.Name = "lstBoKSb2";
             this.lstBoKSb2.Size = new System.Drawing.Size(53, 56);
             this.lstBoKSb2.TabIndex = 122;
@@ -1135,7 +1139,7 @@
             // lstBoKSa2
             // 
             this.lstBoKSa2.FormattingEnabled = true;
-            this.lstBoKSa2.Location = new System.Drawing.Point(701, 255);
+            this.lstBoKSa2.Location = new System.Drawing.Point(932, 359);
             this.lstBoKSa2.Name = "lstBoKSa2";
             this.lstBoKSa2.Size = new System.Drawing.Size(53, 56);
             this.lstBoKSa2.TabIndex = 121;
@@ -1143,7 +1147,7 @@
             // lstBoKSb3
             // 
             this.lstBoKSb3.FormattingEnabled = true;
-            this.lstBoKSb3.Location = new System.Drawing.Point(760, 315);
+            this.lstBoKSb3.Location = new System.Drawing.Point(991, 419);
             this.lstBoKSb3.Name = "lstBoKSb3";
             this.lstBoKSb3.Size = new System.Drawing.Size(53, 56);
             this.lstBoKSb3.TabIndex = 124;
@@ -1151,7 +1155,7 @@
             // lstBoKSa3
             // 
             this.lstBoKSa3.FormattingEnabled = true;
-            this.lstBoKSa3.Location = new System.Drawing.Point(701, 315);
+            this.lstBoKSa3.Location = new System.Drawing.Point(932, 419);
             this.lstBoKSa3.Name = "lstBoKSa3";
             this.lstBoKSa3.Size = new System.Drawing.Size(53, 56);
             this.lstBoKSa3.TabIndex = 123;
@@ -1159,7 +1163,7 @@
             // lstBoKSb4
             // 
             this.lstBoKSb4.FormattingEnabled = true;
-            this.lstBoKSb4.Location = new System.Drawing.Point(760, 375);
+            this.lstBoKSb4.Location = new System.Drawing.Point(991, 479);
             this.lstBoKSb4.Name = "lstBoKSb4";
             this.lstBoKSb4.Size = new System.Drawing.Size(53, 56);
             this.lstBoKSb4.TabIndex = 126;
@@ -1167,7 +1171,7 @@
             // lstBoKSa4
             // 
             this.lstBoKSa4.FormattingEnabled = true;
-            this.lstBoKSa4.Location = new System.Drawing.Point(701, 375);
+            this.lstBoKSa4.Location = new System.Drawing.Point(932, 479);
             this.lstBoKSa4.Name = "lstBoKSa4";
             this.lstBoKSa4.Size = new System.Drawing.Size(53, 56);
             this.lstBoKSa4.TabIndex = 125;
@@ -1175,7 +1179,7 @@
             // lstBoKSb8
             // 
             this.lstBoKSb8.FormattingEnabled = true;
-            this.lstBoKSb8.Location = new System.Drawing.Point(761, 615);
+            this.lstBoKSb8.Location = new System.Drawing.Point(992, 719);
             this.lstBoKSb8.Name = "lstBoKSb8";
             this.lstBoKSb8.Size = new System.Drawing.Size(53, 56);
             this.lstBoKSb8.TabIndex = 134;
@@ -1183,7 +1187,7 @@
             // lstBoKSa8
             // 
             this.lstBoKSa8.FormattingEnabled = true;
-            this.lstBoKSa8.Location = new System.Drawing.Point(702, 615);
+            this.lstBoKSa8.Location = new System.Drawing.Point(933, 719);
             this.lstBoKSa8.Name = "lstBoKSa8";
             this.lstBoKSa8.Size = new System.Drawing.Size(53, 56);
             this.lstBoKSa8.TabIndex = 133;
@@ -1191,7 +1195,7 @@
             // lstBoKSb7
             // 
             this.lstBoKSb7.FormattingEnabled = true;
-            this.lstBoKSb7.Location = new System.Drawing.Point(761, 555);
+            this.lstBoKSb7.Location = new System.Drawing.Point(992, 659);
             this.lstBoKSb7.Name = "lstBoKSb7";
             this.lstBoKSb7.Size = new System.Drawing.Size(53, 56);
             this.lstBoKSb7.TabIndex = 132;
@@ -1199,7 +1203,7 @@
             // lstBoKSa7
             // 
             this.lstBoKSa7.FormattingEnabled = true;
-            this.lstBoKSa7.Location = new System.Drawing.Point(702, 555);
+            this.lstBoKSa7.Location = new System.Drawing.Point(933, 659);
             this.lstBoKSa7.Name = "lstBoKSa7";
             this.lstBoKSa7.Size = new System.Drawing.Size(53, 56);
             this.lstBoKSa7.TabIndex = 131;
@@ -1207,7 +1211,7 @@
             // lstBoKSb6
             // 
             this.lstBoKSb6.FormattingEnabled = true;
-            this.lstBoKSb6.Location = new System.Drawing.Point(761, 495);
+            this.lstBoKSb6.Location = new System.Drawing.Point(992, 599);
             this.lstBoKSb6.Name = "lstBoKSb6";
             this.lstBoKSb6.Size = new System.Drawing.Size(53, 56);
             this.lstBoKSb6.TabIndex = 130;
@@ -1215,7 +1219,7 @@
             // lstBoKSa6
             // 
             this.lstBoKSa6.FormattingEnabled = true;
-            this.lstBoKSa6.Location = new System.Drawing.Point(702, 495);
+            this.lstBoKSa6.Location = new System.Drawing.Point(933, 599);
             this.lstBoKSa6.Name = "lstBoKSa6";
             this.lstBoKSa6.Size = new System.Drawing.Size(53, 56);
             this.lstBoKSa6.TabIndex = 129;
@@ -1223,7 +1227,7 @@
             // lstBoKSb5
             // 
             this.lstBoKSb5.FormattingEnabled = true;
-            this.lstBoKSb5.Location = new System.Drawing.Point(760, 435);
+            this.lstBoKSb5.Location = new System.Drawing.Point(991, 539);
             this.lstBoKSb5.Name = "lstBoKSb5";
             this.lstBoKSb5.Size = new System.Drawing.Size(53, 56);
             this.lstBoKSb5.TabIndex = 128;
@@ -1231,7 +1235,7 @@
             // lstBoKSa5
             // 
             this.lstBoKSa5.FormattingEnabled = true;
-            this.lstBoKSa5.Location = new System.Drawing.Point(701, 435);
+            this.lstBoKSa5.Location = new System.Drawing.Point(932, 539);
             this.lstBoKSa5.Name = "lstBoKSa5";
             this.lstBoKSa5.Size = new System.Drawing.Size(53, 56);
             this.lstBoKSa5.TabIndex = 127;
@@ -1239,15 +1243,15 @@
             // lstComp1
             // 
             this.lstComp1.FormattingEnabled = true;
-            this.lstComp1.Location = new System.Drawing.Point(1016, 195);
+            this.lstComp1.Location = new System.Drawing.Point(1247, 299);
             this.lstComp1.Name = "lstComp1";
-            this.lstComp1.Size = new System.Drawing.Size(53, 56);
+            this.lstComp1.Size = new System.Drawing.Size(93, 56);
             this.lstComp1.TabIndex = 135;
             // 
             // lstAvT1
             // 
             this.lstAvT1.FormattingEnabled = true;
-            this.lstAvT1.Location = new System.Drawing.Point(1075, 195);
+            this.lstAvT1.Location = new System.Drawing.Point(1346, 299);
             this.lstAvT1.Name = "lstAvT1";
             this.lstAvT1.Size = new System.Drawing.Size(34, 56);
             this.lstAvT1.TabIndex = 136;
@@ -1255,7 +1259,7 @@
             // lstAvC1
             // 
             this.lstAvC1.FormattingEnabled = true;
-            this.lstAvC1.Location = new System.Drawing.Point(1115, 195);
+            this.lstAvC1.Location = new System.Drawing.Point(1386, 299);
             this.lstAvC1.Name = "lstAvC1";
             this.lstAvC1.Size = new System.Drawing.Size(34, 56);
             this.lstAvC1.TabIndex = 137;
@@ -1263,7 +1267,7 @@
             // lstMvZ1
             // 
             this.lstMvZ1.FormattingEnabled = true;
-            this.lstMvZ1.Location = new System.Drawing.Point(1155, 195);
+            this.lstMvZ1.Location = new System.Drawing.Point(1426, 299);
             this.lstMvZ1.Name = "lstMvZ1";
             this.lstMvZ1.Size = new System.Drawing.Size(34, 56);
             this.lstMvZ1.TabIndex = 138;
@@ -1271,23 +1275,23 @@
             // lstGKM1
             // 
             this.lstGKM1.FormattingEnabled = true;
-            this.lstGKM1.Location = new System.Drawing.Point(1195, 195);
+            this.lstGKM1.Location = new System.Drawing.Point(1466, 299);
             this.lstGKM1.Name = "lstGKM1";
-            this.lstGKM1.Size = new System.Drawing.Size(106, 56);
+            this.lstGKM1.Size = new System.Drawing.Size(66, 56);
             this.lstGKM1.TabIndex = 139;
             // 
             // lstGKM2
             // 
             this.lstGKM2.FormattingEnabled = true;
-            this.lstGKM2.Location = new System.Drawing.Point(1195, 255);
+            this.lstGKM2.Location = new System.Drawing.Point(1466, 359);
             this.lstGKM2.Name = "lstGKM2";
-            this.lstGKM2.Size = new System.Drawing.Size(106, 56);
+            this.lstGKM2.Size = new System.Drawing.Size(66, 56);
             this.lstGKM2.TabIndex = 144;
             // 
             // lstMvZ2
             // 
             this.lstMvZ2.FormattingEnabled = true;
-            this.lstMvZ2.Location = new System.Drawing.Point(1155, 255);
+            this.lstMvZ2.Location = new System.Drawing.Point(1426, 359);
             this.lstMvZ2.Name = "lstMvZ2";
             this.lstMvZ2.Size = new System.Drawing.Size(34, 56);
             this.lstMvZ2.TabIndex = 143;
@@ -1295,7 +1299,7 @@
             // lstAvC2
             // 
             this.lstAvC2.FormattingEnabled = true;
-            this.lstAvC2.Location = new System.Drawing.Point(1115, 255);
+            this.lstAvC2.Location = new System.Drawing.Point(1386, 359);
             this.lstAvC2.Name = "lstAvC2";
             this.lstAvC2.Size = new System.Drawing.Size(34, 56);
             this.lstAvC2.TabIndex = 142;
@@ -1303,7 +1307,7 @@
             // lstAvT2
             // 
             this.lstAvT2.FormattingEnabled = true;
-            this.lstAvT2.Location = new System.Drawing.Point(1075, 255);
+            this.lstAvT2.Location = new System.Drawing.Point(1346, 359);
             this.lstAvT2.Name = "lstAvT2";
             this.lstAvT2.Size = new System.Drawing.Size(34, 56);
             this.lstAvT2.TabIndex = 141;
@@ -1311,23 +1315,23 @@
             // lstComp2
             // 
             this.lstComp2.FormattingEnabled = true;
-            this.lstComp2.Location = new System.Drawing.Point(1016, 255);
+            this.lstComp2.Location = new System.Drawing.Point(1247, 359);
             this.lstComp2.Name = "lstComp2";
-            this.lstComp2.Size = new System.Drawing.Size(53, 56);
+            this.lstComp2.Size = new System.Drawing.Size(93, 56);
             this.lstComp2.TabIndex = 140;
             // 
             // lstGKM3
             // 
             this.lstGKM3.FormattingEnabled = true;
-            this.lstGKM3.Location = new System.Drawing.Point(1195, 315);
+            this.lstGKM3.Location = new System.Drawing.Point(1466, 419);
             this.lstGKM3.Name = "lstGKM3";
-            this.lstGKM3.Size = new System.Drawing.Size(106, 56);
+            this.lstGKM3.Size = new System.Drawing.Size(66, 56);
             this.lstGKM3.TabIndex = 149;
             // 
             // lstMvZ3
             // 
             this.lstMvZ3.FormattingEnabled = true;
-            this.lstMvZ3.Location = new System.Drawing.Point(1155, 315);
+            this.lstMvZ3.Location = new System.Drawing.Point(1426, 419);
             this.lstMvZ3.Name = "lstMvZ3";
             this.lstMvZ3.Size = new System.Drawing.Size(34, 56);
             this.lstMvZ3.TabIndex = 148;
@@ -1335,7 +1339,7 @@
             // lstAvC3
             // 
             this.lstAvC3.FormattingEnabled = true;
-            this.lstAvC3.Location = new System.Drawing.Point(1115, 315);
+            this.lstAvC3.Location = new System.Drawing.Point(1386, 419);
             this.lstAvC3.Name = "lstAvC3";
             this.lstAvC3.Size = new System.Drawing.Size(34, 56);
             this.lstAvC3.TabIndex = 147;
@@ -1343,7 +1347,7 @@
             // lstAvT3
             // 
             this.lstAvT3.FormattingEnabled = true;
-            this.lstAvT3.Location = new System.Drawing.Point(1075, 315);
+            this.lstAvT3.Location = new System.Drawing.Point(1346, 419);
             this.lstAvT3.Name = "lstAvT3";
             this.lstAvT3.Size = new System.Drawing.Size(34, 56);
             this.lstAvT3.TabIndex = 146;
@@ -1351,23 +1355,23 @@
             // lstComp3
             // 
             this.lstComp3.FormattingEnabled = true;
-            this.lstComp3.Location = new System.Drawing.Point(1016, 315);
+            this.lstComp3.Location = new System.Drawing.Point(1247, 419);
             this.lstComp3.Name = "lstComp3";
-            this.lstComp3.Size = new System.Drawing.Size(53, 56);
+            this.lstComp3.Size = new System.Drawing.Size(93, 56);
             this.lstComp3.TabIndex = 145;
             // 
             // lstGKM4
             // 
             this.lstGKM4.FormattingEnabled = true;
-            this.lstGKM4.Location = new System.Drawing.Point(1195, 375);
+            this.lstGKM4.Location = new System.Drawing.Point(1466, 479);
             this.lstGKM4.Name = "lstGKM4";
-            this.lstGKM4.Size = new System.Drawing.Size(106, 56);
+            this.lstGKM4.Size = new System.Drawing.Size(66, 56);
             this.lstGKM4.TabIndex = 154;
             // 
             // lstMvZ4
             // 
             this.lstMvZ4.FormattingEnabled = true;
-            this.lstMvZ4.Location = new System.Drawing.Point(1155, 375);
+            this.lstMvZ4.Location = new System.Drawing.Point(1426, 479);
             this.lstMvZ4.Name = "lstMvZ4";
             this.lstMvZ4.Size = new System.Drawing.Size(34, 56);
             this.lstMvZ4.TabIndex = 153;
@@ -1375,7 +1379,7 @@
             // lstAvC4
             // 
             this.lstAvC4.FormattingEnabled = true;
-            this.lstAvC4.Location = new System.Drawing.Point(1115, 375);
+            this.lstAvC4.Location = new System.Drawing.Point(1386, 479);
             this.lstAvC4.Name = "lstAvC4";
             this.lstAvC4.Size = new System.Drawing.Size(34, 56);
             this.lstAvC4.TabIndex = 152;
@@ -1383,7 +1387,7 @@
             // lstAvT4
             // 
             this.lstAvT4.FormattingEnabled = true;
-            this.lstAvT4.Location = new System.Drawing.Point(1075, 375);
+            this.lstAvT4.Location = new System.Drawing.Point(1346, 479);
             this.lstAvT4.Name = "lstAvT4";
             this.lstAvT4.Size = new System.Drawing.Size(34, 56);
             this.lstAvT4.TabIndex = 151;
@@ -1391,23 +1395,23 @@
             // lstComp4
             // 
             this.lstComp4.FormattingEnabled = true;
-            this.lstComp4.Location = new System.Drawing.Point(1016, 375);
+            this.lstComp4.Location = new System.Drawing.Point(1247, 479);
             this.lstComp4.Name = "lstComp4";
-            this.lstComp4.Size = new System.Drawing.Size(53, 56);
+            this.lstComp4.Size = new System.Drawing.Size(93, 56);
             this.lstComp4.TabIndex = 150;
             // 
             // lstGKM5
             // 
             this.lstGKM5.FormattingEnabled = true;
-            this.lstGKM5.Location = new System.Drawing.Point(1195, 435);
+            this.lstGKM5.Location = new System.Drawing.Point(1466, 539);
             this.lstGKM5.Name = "lstGKM5";
-            this.lstGKM5.Size = new System.Drawing.Size(106, 56);
+            this.lstGKM5.Size = new System.Drawing.Size(66, 56);
             this.lstGKM5.TabIndex = 159;
             // 
             // lstMvZ5
             // 
             this.lstMvZ5.FormattingEnabled = true;
-            this.lstMvZ5.Location = new System.Drawing.Point(1155, 435);
+            this.lstMvZ5.Location = new System.Drawing.Point(1426, 539);
             this.lstMvZ5.Name = "lstMvZ5";
             this.lstMvZ5.Size = new System.Drawing.Size(34, 56);
             this.lstMvZ5.TabIndex = 158;
@@ -1415,7 +1419,7 @@
             // lstAvC5
             // 
             this.lstAvC5.FormattingEnabled = true;
-            this.lstAvC5.Location = new System.Drawing.Point(1115, 435);
+            this.lstAvC5.Location = new System.Drawing.Point(1386, 539);
             this.lstAvC5.Name = "lstAvC5";
             this.lstAvC5.Size = new System.Drawing.Size(34, 56);
             this.lstAvC5.TabIndex = 157;
@@ -1423,7 +1427,7 @@
             // lstAvT5
             // 
             this.lstAvT5.FormattingEnabled = true;
-            this.lstAvT5.Location = new System.Drawing.Point(1075, 435);
+            this.lstAvT5.Location = new System.Drawing.Point(1346, 539);
             this.lstAvT5.Name = "lstAvT5";
             this.lstAvT5.Size = new System.Drawing.Size(34, 56);
             this.lstAvT5.TabIndex = 156;
@@ -1431,23 +1435,23 @@
             // lstComp5
             // 
             this.lstComp5.FormattingEnabled = true;
-            this.lstComp5.Location = new System.Drawing.Point(1016, 435);
+            this.lstComp5.Location = new System.Drawing.Point(1247, 539);
             this.lstComp5.Name = "lstComp5";
-            this.lstComp5.Size = new System.Drawing.Size(53, 56);
+            this.lstComp5.Size = new System.Drawing.Size(93, 56);
             this.lstComp5.TabIndex = 155;
             // 
             // lstGKM8
             // 
             this.lstGKM8.FormattingEnabled = true;
-            this.lstGKM8.Location = new System.Drawing.Point(1195, 615);
+            this.lstGKM8.Location = new System.Drawing.Point(1466, 719);
             this.lstGKM8.Name = "lstGKM8";
-            this.lstGKM8.Size = new System.Drawing.Size(106, 56);
+            this.lstGKM8.Size = new System.Drawing.Size(66, 56);
             this.lstGKM8.TabIndex = 174;
             // 
             // lstMvZ8
             // 
             this.lstMvZ8.FormattingEnabled = true;
-            this.lstMvZ8.Location = new System.Drawing.Point(1155, 615);
+            this.lstMvZ8.Location = new System.Drawing.Point(1426, 719);
             this.lstMvZ8.Name = "lstMvZ8";
             this.lstMvZ8.Size = new System.Drawing.Size(34, 56);
             this.lstMvZ8.TabIndex = 173;
@@ -1455,7 +1459,7 @@
             // lstAvC8
             // 
             this.lstAvC8.FormattingEnabled = true;
-            this.lstAvC8.Location = new System.Drawing.Point(1115, 615);
+            this.lstAvC8.Location = new System.Drawing.Point(1386, 719);
             this.lstAvC8.Name = "lstAvC8";
             this.lstAvC8.Size = new System.Drawing.Size(34, 56);
             this.lstAvC8.TabIndex = 172;
@@ -1463,7 +1467,7 @@
             // lstAvT8
             // 
             this.lstAvT8.FormattingEnabled = true;
-            this.lstAvT8.Location = new System.Drawing.Point(1075, 615);
+            this.lstAvT8.Location = new System.Drawing.Point(1346, 719);
             this.lstAvT8.Name = "lstAvT8";
             this.lstAvT8.Size = new System.Drawing.Size(34, 56);
             this.lstAvT8.TabIndex = 171;
@@ -1471,23 +1475,23 @@
             // lstComp8
             // 
             this.lstComp8.FormattingEnabled = true;
-            this.lstComp8.Location = new System.Drawing.Point(1016, 615);
+            this.lstComp8.Location = new System.Drawing.Point(1247, 719);
             this.lstComp8.Name = "lstComp8";
-            this.lstComp8.Size = new System.Drawing.Size(53, 56);
+            this.lstComp8.Size = new System.Drawing.Size(93, 56);
             this.lstComp8.TabIndex = 170;
             // 
             // lstGKM7
             // 
             this.lstGKM7.FormattingEnabled = true;
-            this.lstGKM7.Location = new System.Drawing.Point(1195, 555);
+            this.lstGKM7.Location = new System.Drawing.Point(1466, 659);
             this.lstGKM7.Name = "lstGKM7";
-            this.lstGKM7.Size = new System.Drawing.Size(106, 56);
+            this.lstGKM7.Size = new System.Drawing.Size(66, 56);
             this.lstGKM7.TabIndex = 169;
             // 
             // lstMvZ7
             // 
             this.lstMvZ7.FormattingEnabled = true;
-            this.lstMvZ7.Location = new System.Drawing.Point(1155, 555);
+            this.lstMvZ7.Location = new System.Drawing.Point(1426, 659);
             this.lstMvZ7.Name = "lstMvZ7";
             this.lstMvZ7.Size = new System.Drawing.Size(34, 56);
             this.lstMvZ7.TabIndex = 168;
@@ -1495,7 +1499,7 @@
             // lstAvC7
             // 
             this.lstAvC7.FormattingEnabled = true;
-            this.lstAvC7.Location = new System.Drawing.Point(1115, 555);
+            this.lstAvC7.Location = new System.Drawing.Point(1386, 659);
             this.lstAvC7.Name = "lstAvC7";
             this.lstAvC7.Size = new System.Drawing.Size(34, 56);
             this.lstAvC7.TabIndex = 167;
@@ -1503,7 +1507,7 @@
             // lstAvT7
             // 
             this.lstAvT7.FormattingEnabled = true;
-            this.lstAvT7.Location = new System.Drawing.Point(1075, 555);
+            this.lstAvT7.Location = new System.Drawing.Point(1346, 659);
             this.lstAvT7.Name = "lstAvT7";
             this.lstAvT7.Size = new System.Drawing.Size(34, 56);
             this.lstAvT7.TabIndex = 166;
@@ -1511,23 +1515,23 @@
             // lstComp7
             // 
             this.lstComp7.FormattingEnabled = true;
-            this.lstComp7.Location = new System.Drawing.Point(1016, 555);
+            this.lstComp7.Location = new System.Drawing.Point(1247, 659);
             this.lstComp7.Name = "lstComp7";
-            this.lstComp7.Size = new System.Drawing.Size(53, 56);
+            this.lstComp7.Size = new System.Drawing.Size(93, 56);
             this.lstComp7.TabIndex = 165;
             // 
             // lstGKM6
             // 
             this.lstGKM6.FormattingEnabled = true;
-            this.lstGKM6.Location = new System.Drawing.Point(1195, 495);
+            this.lstGKM6.Location = new System.Drawing.Point(1466, 599);
             this.lstGKM6.Name = "lstGKM6";
-            this.lstGKM6.Size = new System.Drawing.Size(106, 56);
+            this.lstGKM6.Size = new System.Drawing.Size(66, 56);
             this.lstGKM6.TabIndex = 164;
             // 
             // lstMvZ6
             // 
             this.lstMvZ6.FormattingEnabled = true;
-            this.lstMvZ6.Location = new System.Drawing.Point(1155, 495);
+            this.lstMvZ6.Location = new System.Drawing.Point(1426, 599);
             this.lstMvZ6.Name = "lstMvZ6";
             this.lstMvZ6.Size = new System.Drawing.Size(34, 56);
             this.lstMvZ6.TabIndex = 163;
@@ -1535,7 +1539,7 @@
             // lstAvC6
             // 
             this.lstAvC6.FormattingEnabled = true;
-            this.lstAvC6.Location = new System.Drawing.Point(1115, 495);
+            this.lstAvC6.Location = new System.Drawing.Point(1386, 599);
             this.lstAvC6.Name = "lstAvC6";
             this.lstAvC6.Size = new System.Drawing.Size(34, 56);
             this.lstAvC6.TabIndex = 162;
@@ -1543,7 +1547,7 @@
             // lstAvT6
             // 
             this.lstAvT6.FormattingEnabled = true;
-            this.lstAvT6.Location = new System.Drawing.Point(1075, 495);
+            this.lstAvT6.Location = new System.Drawing.Point(1346, 599);
             this.lstAvT6.Name = "lstAvT6";
             this.lstAvT6.Size = new System.Drawing.Size(34, 56);
             this.lstAvT6.TabIndex = 161;
@@ -1551,16 +1555,67 @@
             // lstComp6
             // 
             this.lstComp6.FormattingEnabled = true;
-            this.lstComp6.Location = new System.Drawing.Point(1016, 495);
+            this.lstComp6.Location = new System.Drawing.Point(1247, 599);
             this.lstComp6.Name = "lstComp6";
-            this.lstComp6.Size = new System.Drawing.Size(53, 56);
+            this.lstComp6.Size = new System.Drawing.Size(93, 56);
             this.lstComp6.TabIndex = 160;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(815, 18);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 13);
+            this.label6.TabIndex = 177;
+            this.label6.Text = "Log ( succes ):";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(1175, 18);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 13);
+            this.label7.TabIndex = 178;
+            this.label7.Text = "Log ( fouten ):";
+            // 
+            // lstToetscodes
+            // 
+            this.lstToetscodes.FormattingEnabled = true;
+            this.lstToetscodes.Location = new System.Drawing.Point(360, 12);
+            this.lstToetscodes.Name = "lstToetscodes";
+            this.lstToetscodes.Size = new System.Drawing.Size(452, 251);
+            this.lstToetscodes.TabIndex = 179;
+            // 
+            // txtSucces
+            // 
+            this.txtSucces.Location = new System.Drawing.Point(818, 34);
+            this.txtSucces.Multiline = true;
+            this.txtSucces.Name = "txtSucces";
+            this.txtSucces.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtSucces.Size = new System.Drawing.Size(354, 229);
+            this.txtSucces.TabIndex = 180;
+            this.txtSucces.WordWrap = false;
+            // 
+            // txtFail
+            // 
+            this.txtFail.Location = new System.Drawing.Point(1178, 34);
+            this.txtFail.Multiline = true;
+            this.txtFail.Name = "txtFail";
+            this.txtFail.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtFail.Size = new System.Drawing.Size(354, 229);
+            this.txtFail.TabIndex = 181;
+            this.txtFail.WordWrap = false;
             // 
             // frmImport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1609, 738);
+            this.ClientSize = new System.Drawing.Size(1550, 802);
+            this.Controls.Add(this.txtFail);
+            this.Controls.Add(this.txtSucces);
+            this.Controls.Add(this.lstToetscodes);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.lstGKM8);
             this.Controls.Add(this.lstMvZ8);
             this.Controls.Add(this.lstAvC8);
@@ -1917,6 +1972,11 @@
         private System.Windows.Forms.ListBox lstAvC6;
         private System.Windows.Forms.ListBox lstAvT6;
         private System.Windows.Forms.ListBox lstComp6;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ListBox lstToetscodes;
+        private System.Windows.Forms.TextBox txtSucces;
+        private System.Windows.Forms.TextBox txtFail;
     }
 }
 
