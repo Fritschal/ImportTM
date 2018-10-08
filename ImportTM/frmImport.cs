@@ -47,8 +47,12 @@ namespace ImportTM
 
         private void btnOpenTM_Click(object sender, EventArgs e)
         {
+            //Initialiseren controls:
+            txtSucces.Text = "";
+            txtFail.Text = "";
+            lstToetscodes.Items.Clear();
 
-            //Selecteer een bestand zodat de map met toetsmatrijzen bekend is:
+            //Selecteer een bestand zodat de map met toetsmatrijzen bekend is:Pick/Wick#12
             if (openTM.FileName.Equals("<leeg>"))
             {
                 openTM.FileName = "Toetsmatrijs";
