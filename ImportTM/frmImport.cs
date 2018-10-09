@@ -47,6 +47,14 @@ namespace ImportTM
 
         private void btnOpenTM_Click(object sender, EventArgs e)
         {
+            //Importeren in DB?
+            bool blnImport = false;
+            if (chkImportInDB.Checked)
+            {
+                blnImport = MessageBox.Show("Weet je zeker dat je wilt importeren in de DB? Checkbox staat aangevinkt!!!", "!!!LET OP!!!", MessageBoxButtons.OKCancel) == DialogResult.OK;
+            }
+            chkImportInDB.Checked = blnImport;
+            
             //Initialiseren controls:
             txtSucces.Text = "";
             txtFail.Text = "";
@@ -76,6 +84,7 @@ namespace ImportTM
 
                 //Initialiseren controls:
                 intDoelen = 0;
+                int fkToets = -1;
                 foreach (Control ctrInstance in Controls)
                 {
                     switch (ctrInstance.GetType().Name)
@@ -114,6 +123,7 @@ namespace ImportTM
                         if (rdrToets.HasRows)
                         {
                             rdrToets.Read();
+                            fkToets = Convert.ToInt32(rdrToets["pkId"]);
                             txtPKToets.Text = rdrToets["pkId"].ToString();
                             txtSucces.Text += "Toetscode gevonden in DB, PK: " + txtPKToets.Text + "\r\n";
                         }
@@ -666,6 +676,453 @@ namespace ImportTM
                     }
                 }
 
+                //Versiebeheer:
+
+                //Zoek naar begin tabel versiebeheer:
+                int intBeginVersietabel = -1;
+                for (int i = 14; i < 100; i++)
+                {
+                    String celZoek = "A" + Convert.ToString(i);
+                    if (xlWorksheet.get_Range(celZoek, celZoek).Value2 != null)
+                    {
+                        String strValue = xlWorksheet.get_Range(celZoek, celZoek).Value2.ToString();
+                        if (strValue.Equals("Versie"))
+                        {
+                            intBeginVersietabel = i;
+                        }
+                    }
+                }
+
+                if (intBeginVersietabel > 0)
+                {
+                    //De versietabel is gevonden!
+                    for (int i = intBeginVersietabel + 1; i < intBeginVersietabel + 10; i++)
+                    {
+                        String celVersie = "A" + Convert.ToString(i);
+                        String strVersie;
+                        if (xlWorksheet.get_Range(celVersie, celVersie).Value2 != null)
+                        {
+                            strVersie = xlWorksheet.get_Range(celVersie, celVersie).Value2.ToString();
+                            if (!strVersie.Equals(""))
+                            {
+                                strVersie = strVersie.Trim();
+                            }
+                            else
+                            {
+                                if (i == 30) //Er hoort minimaal één versieregel aanwezig te zijn!
+                                {
+                                    lstVersies.Items.Add("???");
+                                    txtFail.Text += "Versiebeheer onduidelijk! Cel -Versie- leeg?" + "\r\n";
+                                    continue;
+                                }
+                                else
+                                {
+                                    break;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (i == 30) //Er hoort minimaal één versieregel aanwezig te zijn!
+                            {
+                                txtFail.Text += "Versiebeheer onduidelijk! Cel -Versie- leeg?" + "\r\n";
+                                continue;
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+
+                        String celDatum = "B" + Convert.ToString(i);
+                        String strDatum;
+                        if (xlWorksheet.get_Range(celDatum, celDatum).Value2 != null)
+                        {
+                            strDatum = xlWorksheet.get_Range(celDatum, celDatum).Value2.ToString();
+                            if (!strDatum.Equals(""))
+                            {
+                                try
+                                {
+                                    strDatum = DateTime.FromOADate(Convert.ToDouble(strDatum.Trim())).ToString();
+                                }
+                                catch (Exception ex1)
+                                {
+                                    try
+                                    {
+                                        strDatum = DateTime.Parse(strDatum.Trim()).ToString();
+                                    }
+                                    catch (Exception ex2)
+                                    {
+                                        strDatum = "iets vreemds";
+                                        txtFail.Text += "Versiebeheer onduidelijk! Cel -Datum- leeg?" + "\r\n";
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                lstVersies.Items.Add("???");
+                                txtFail.Text += "Versiebeheer onduidelijk! Cel -Datum- leeg?" + "\r\n";
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            txtFail.Text += "Versiebeheer onduidelijk! Cel -Datum- leeg?" + "\r\n";
+                            continue;
+                        }
+
+                        String celAuteur = "C" + Convert.ToString(i);
+                        String strAuteur;
+                        if (xlWorksheet.get_Range(celAuteur, celAuteur).Value2 != null)
+                        {
+                            strAuteur = xlWorksheet.get_Range(celAuteur, celAuteur).Value2.ToString();
+                            if (!strAuteur.Equals(""))
+                            {
+                                strAuteur = strAuteur.Trim();
+                            }
+                            else
+                            {
+                                lstVersies.Items.Add("???");
+                                txtFail.Text += "Versiebeheer onduidelijk! Cel -Auteur- leeg?" + "\r\n";
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            txtFail.Text += "Versiebeheer onduidelijk! Cel -Auteur- leeg?" + "\r\n";
+                            continue;
+                        }
+
+                        String celBeschrijving = "E" + Convert.ToString(i);
+                        String strBeschrijving;
+                        if (xlWorksheet.get_Range(celBeschrijving, celBeschrijving).Value2 != null)
+                        {
+                            strBeschrijving = xlWorksheet.get_Range(celBeschrijving, celBeschrijving).Value2.ToString();
+                            if (!strBeschrijving.Equals(""))
+                            {
+                                strBeschrijving = strBeschrijving.Trim();
+                            }
+                            else
+                            {
+                                lstVersies.Items.Add("???");
+                                txtFail.Text += "Versiebeheer onduidelijk! Cel -Beschrijving- leeg?" + "\r\n";
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            txtFail.Text += "Versiebeheer onduidelijk! Cel -Beschrijving- leeg?" + "\r\n";
+                            continue;
+                        }
+
+                        //Plak alle versiedata aan elkaar en plaats in listbox:
+                        lstVersies.Items.Add(strVersie + "|" + strDatum + "|" + strAuteur + "|" + strBeschrijving);
+                        txtSucces.Text += strVersie + "|" + strDatum + "|" + strAuteur + "|" + strBeschrijving + "\r\n";
+
+                        //Importeer de versieregel in de database:
+                        if (blnImport && false)
+                        {
+                            // Stap 1: haal pkId op uit de database:
+                            int intMaxId = 0;
+                            using (SqlCommand cmdMaxId = new SqlCommand("SELECT MAX(pkId) AS maxId FROM tblTMVersie", cnnOnderwijs))
+                            {
+                                using (SqlDataReader rdrMaxId = cmdMaxId.ExecuteReader())
+                                {
+                                    rdrMaxId.Read();
+                                    if (!rdrMaxId.IsDBNull(0))
+                                    {
+                                        intMaxId = (int)rdrMaxId["maxId"];
+                                    }
+                                    rdrMaxId.Close();
+                                }
+                            }
+                            intMaxId++;
+
+                            // Stap 2: Stel Query samen:
+                            using (SqlCommand cmdInsert = new SqlCommand("INSERT INTO tblTMVersie (pkId, fkToets, decNummer, datDatum, fkAuteur, strBeschrijving, strMoetWeg) " +
+                                "VALUES (" +
+                                intMaxId.ToString() + ", " +
+                                fkToets.ToString() + ", " +
+                                strVersie + ", '" +
+                                strDatum + "', " +
+                                "16" + ", '" +
+                                strBeschrijving + "', '" +
+                                strAuteur + "')", cnnOnderwijs))
+                            {
+                                //MessageBox.Show(cmdInsert.CommandText);
+                                int intAantalRecords = cmdInsert.ExecuteNonQuery();
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    lstVersies.Items.Add("???");
+                    txtFail.Text += "Versiebeheer onduidelijk! Tabel niet gevonden" + "\r\n";
+                }
+
+                //**BEGIN** leerdoelen naar database===============================================================================:
+                if (blnImport)
+                {
+                    for (int intDoel = 1; intDoel <= intDoelen; intDoel++)
+                    {
+                        // Stap 1: Haal leerdoel-data uit form:
+                        String strLeerdoel = ((TextBox)Controls["txtLeerdoel" + Convert.ToString(intDoel)]).Text.ToString().Replace("'","`");
+                        String strOnderwerpen = ((TextBox)Controls["txtOnderwerpen" + Convert.ToString(intDoel)]).Text.ToString().Replace("'", "`");
+                        String strWeging = ((TextBox)Controls["txtWeging" + Convert.ToString(intDoel)]).Text;
+                        bool blnO = ((TextBox)Controls["txtO" + Convert.ToString(intDoel)]).Text.Equals("X");
+                        bool blnB = ((TextBox)Controls["txtB" + Convert.ToString(intDoel)]).Text.Equals("X");
+                        bool blnT = ((TextBox)Controls["txtT" + Convert.ToString(intDoel)]).Text.Equals("X");
+                        bool blnA = ((TextBox)Controls["txtA" + Convert.ToString(intDoel)]).Text.Equals("X");
+                        bool blnE = ((TextBox)Controls["txtE" + Convert.ToString(intDoel)]).Text.Equals("X");
+                        bool blnC = ((TextBox)Controls["txtC" + Convert.ToString(intDoel)]).Text.Equals("X");
+
+                        // Stap 2: haal pkId op uit de database:
+                        int intMaxId = 0;
+                        using (SqlCommand cmdMaxId = new SqlCommand("SELECT MAX(pkId) AS maxId FROM tblDoel", cnnOnderwijs))
+                        {
+                            using (SqlDataReader rdrMaxId = cmdMaxId.ExecuteReader())
+                            {
+                                rdrMaxId.Read();
+                                if (!rdrMaxId.IsDBNull(0))
+                                {
+                                    intMaxId = (int)rdrMaxId["maxId"];
+                                }
+                                rdrMaxId.Close();
+                            }
+                        }
+                        int pkDoel = intMaxId + 1;
+
+                        // Stap 3: Stel Query samen en voer 'm uit:
+                        using (SqlCommand cmdInsert = new SqlCommand("INSERT INTO tblDoel (pkId, fkDoeltype, fkToets, strOmschrijving, strOnderwerpen, decWeging, blnOnthouden, blnBegrijpen, blnToepassen, blnAnalyseren, blnEvalueren, blnCreeren) " +
+                            "VALUES (" +
+                            pkDoel.ToString() + ", " +
+                            "1" + ", " +
+                            fkToets.ToString() + ", '" +
+                            strLeerdoel + "', '" +
+                            strOnderwerpen + "', " +
+                            strWeging + ", " +
+                            (blnO ? 1 : 0) + ", " +
+                            (blnB ? 1 : 0) + ", " +
+                            (blnT ? 1 : 0) + ", " +
+                            (blnA ? 1 : 0) + ", " +
+                            (blnE ? 1 : 0) + ", " +
+                            (blnC ? 1 : 0) + ")", cnnOnderwijs))
+                        {
+                            //MessageBox.Show(cmdInsert.CommandText);
+                            int intAantalRecords = cmdInsert.ExecuteNonQuery();
+                        }
+
+                        // Stap 4a: BoKS-data:
+                        if (!((TextBox)Controls["txtPKBoKSa" + Convert.ToString(intDoel)]).Text.ToString().Equals(""))
+                        {
+                            int pkBoKS = Convert.ToInt32(((TextBox)Controls["txtPKBoKSa" + Convert.ToString(intDoel)]).Text);
+
+
+                            // Stap 4a.1: Haal alle BoKS-items uit lijst:
+                            for (int iItem = 0; iItem < ((ListBox)Controls["lstBoKSa" + Convert.ToString(intDoel)]).Items.Count; iItem++)
+                            {
+                                //Stap 4a.1.1: Categorie- en Itemnummer:
+                                String strItem = ((ListBox)Controls["lstBoKSa" + Convert.ToString(intDoel)]).Items[iItem].ToString();
+                                String[] strSplit = strItem.Split('.');
+                                int intCat = Convert.ToInt32(strSplit[0]);
+                                int intItm = Convert.ToInt32(strSplit[1]);
+
+                                // Stap 4a.1.2: Haal PK van BoKS-item uit DB:
+                                int pkItem = 0;
+                                using (SqlCommand cmdPKItem = new SqlCommand("SELECT pkItem FROM qryBoKSItem WHERE pkBoKS = " + pkBoKS.ToString() + " AND Categorienummer = " + intCat.ToString() + " AND Itemnummer = " + intItm.ToString(), cnnOnderwijs))
+                                {
+                                    using (SqlDataReader rdrPKItem = cmdPKItem.ExecuteReader())
+                                    {
+                                        rdrPKItem.Read();
+                                        if (!rdrPKItem.IsDBNull(0))
+                                        {
+                                            pkItem = (int)rdrPKItem["pkItem"];
+                                        }
+                                        rdrPKItem.Close();
+                                    }
+                                }
+
+                                // Stap 4a.1.3: Lees de maximale pk-waarde uit tblDoelBoKSItem:
+                                int pkDoelBoKSItem = 0;
+                                using (SqlCommand cmdMaxId = new SqlCommand("SELECT MAX(pkId) AS maxId FROM tblDoelBoKSItem", cnnOnderwijs))
+                                {
+                                    using (SqlDataReader rdrMaxId = cmdMaxId.ExecuteReader())
+                                    {
+                                        rdrMaxId.Read();
+                                        if (!rdrMaxId.IsDBNull(0))
+                                        {
+                                            pkDoelBoKSItem = (int)rdrMaxId["maxId"];
+                                        }
+                                        rdrMaxId.Close();
+                                    }
+                                }
+                                pkDoelBoKSItem++;
+
+                                // Stap 4a.1.4: Stel Query samen en voer 'm uit:
+                                using (SqlCommand cmdInsert = new SqlCommand("INSERT INTO tblDoelBoKSItem (pkId, fkDoel, fkBoKSItem) " +
+                                    "VALUES (" +
+                                    pkDoelBoKSItem.ToString() + ", " +
+                                    pkDoel.ToString() + ", " +
+                                    pkItem.ToString() + ")", cnnOnderwijs))
+                                {
+                                    //MessageBox.Show(cmdInsert.CommandText);
+                                    int intAantalRecords = cmdInsert.ExecuteNonQuery();
+                                }
+                            }
+                        }
+
+                        // Stap 4b: BoKS-data:
+                        if (!((TextBox)Controls["txtPKBoKSb" + Convert.ToString(intDoel)]).Text.ToString().Equals(""))
+                        {
+                            int pkBoKS = Convert.ToInt32(((TextBox)Controls["txtPKBoKSb" + Convert.ToString(intDoel)]).Text);
+
+
+                            // Stap 4b.1: Haal alle BoKS-items uit lijst:
+                            for (int iItem = 0; iItem < ((ListBox)Controls["lstBoKSb" + Convert.ToString(intDoel)]).Items.Count; iItem++)
+                            {
+                                //Stap 4b.1.1: Categorie- en Itemnummer:
+                                String strItem = ((ListBox)Controls["lstBoKSb" + Convert.ToString(intDoel)]).Items[iItem].ToString();
+                                String[] strSplit = strItem.Split('.');
+                                int intCat = Convert.ToInt32(strSplit[0]);
+                                int intItm = Convert.ToInt32(strSplit[1]);
+
+                                // Stap 4b.1.2: Haal PK van BoKS-item uit DB:
+                                int pkItem = 0;
+                                using (SqlCommand cmdPKItem = new SqlCommand("SELECT pkItem FROM qryBoKSItem WHERE pkBoKS = " + pkBoKS.ToString() + " AND Categorienummer = " + intCat.ToString() + " AND Itemnummer = " + intItm.ToString(), cnnOnderwijs))
+                                {
+                                    using (SqlDataReader rdrPKItem = cmdPKItem.ExecuteReader())
+                                    {
+                                        rdrPKItem.Read();
+                                        if (!rdrPKItem.IsDBNull(0))
+                                        {
+                                            pkItem = (int)rdrPKItem["pkItem"];
+                                        }
+                                        rdrPKItem.Close();
+                                    }
+                                }
+
+                                // Stap 4b.1.3: Lees de maximale pk-waarde uit tblDoelBoKSItem:
+                                int pkDoelBoKSItem = 0;
+                                using (SqlCommand cmdMaxId = new SqlCommand("SELECT MAX(pkId) AS maxId FROM tblDoelBoKSItem", cnnOnderwijs))
+                                {
+                                    using (SqlDataReader rdrMaxId = cmdMaxId.ExecuteReader())
+                                    {
+                                        rdrMaxId.Read();
+                                        if (!rdrMaxId.IsDBNull(0))
+                                        {
+                                            pkDoelBoKSItem = (int)rdrMaxId["maxId"];
+                                        }
+                                        rdrMaxId.Close();
+                                    }
+                                }
+                                pkDoelBoKSItem++;
+
+                                // Stap 4b.1.4: Stel Query samen en voer 'm uit:
+                                using (SqlCommand cmdInsert = new SqlCommand("INSERT INTO tblDoelBoKSItem (pkId, fkDoel, fkBoKSItem) " +
+                                    "VALUES (" +
+                                    pkDoelBoKSItem.ToString() + ", " +
+                                    pkDoel.ToString() + ", " +
+                                    pkItem.ToString() + ")", cnnOnderwijs))
+                                {
+                                    //MessageBox.Show(cmdInsert.CommandText);
+                                    int intAantalRecords = cmdInsert.ExecuteNonQuery();
+                                }
+                            }
+                        }
+
+                        //Competentie-data:
+                        for (int iComp = 0; iComp < ((ListBox)Controls["lstComp" + Convert.ToString(intDoel)]).Items.Count; iComp++)
+                        {
+                            //Haal data op uit form:
+                            int fkComp = pkCompetentie(((ListBox)Controls["lstComp" + Convert.ToString(intDoel)]).Items[iComp].ToString());
+                            int fkNiveauT = pkNiveau("AvT", ((ListBox)Controls["lstAvT" + Convert.ToString(intDoel)]).Items[iComp].ToString());
+                            int fkNiveauC = pkNiveau("AvC", ((ListBox)Controls["lstAvC" + Convert.ToString(intDoel)]).Items[iComp].ToString());
+                            int fkNiveauZ = pkNiveau("MvZ", ((ListBox)Controls["lstMvZ" + Convert.ToString(intDoel)]).Items[iComp].ToString());
+
+                            //Lees de maximale pk-waarde uit tblDoelCompetentie:
+                            int pkDoelComp = 0;
+                            using (SqlCommand cmdMaxId = new SqlCommand("SELECT MAX(pkId) AS maxId FROM tblDoelCompetentie", cnnOnderwijs))
+                            {
+                                using (SqlDataReader rdrMaxId = cmdMaxId.ExecuteReader())
+                                {
+                                    rdrMaxId.Read();
+                                    if (!rdrMaxId.IsDBNull(0))
+                                    {
+                                        pkDoelComp = (int)rdrMaxId["maxId"];
+                                    }
+                                    rdrMaxId.Close();
+                                }
+                            }
+                            pkDoelComp++;
+
+                            //Stel Query samen en voer 'm uit:
+                            using (SqlCommand cmdInsert = new SqlCommand("INSERT INTO tblDoelCompetentie (pkId, fkCompetentie, fkDoel, fkNiveauT, fkNiveauC, fkNiveauZ) " +
+                                "VALUES (" +
+                                pkDoelComp.ToString() + ", " +
+                                fkComp.ToString() + ", " +
+                                pkDoel.ToString() + ", " +
+                                fkNiveauT.ToString() + ", " +
+                                fkNiveauC.ToString() + ", " +
+                                fkNiveauZ.ToString() + ")", cnnOnderwijs))
+                            {
+                                //MessageBox.Show(cmdInsert.CommandText);
+                                int intAantalRecords = cmdInsert.ExecuteNonQuery();
+                            }
+
+                            //Gedragskenmerken (GKM)==============================================
+                            //Lees de maximale pk-waarde uit tblDoelCompetentieGedragskenmerk:
+                            int pkDoelCompetentieGKM = 0;
+                            using (SqlCommand cmdMaxId = new SqlCommand("SELECT MAX(pkId) AS maxId FROM tblDoelCompetentieGedragskenmerk", cnnOnderwijs))
+                            {
+                                using (SqlDataReader rdrMaxId = cmdMaxId.ExecuteReader())
+                                {
+                                    rdrMaxId.Read();
+                                    if (!rdrMaxId.IsDBNull(0))
+                                    {
+                                        pkDoelCompetentieGKM = (int)rdrMaxId["maxId"];
+                                    }
+                                    rdrMaxId.Close();
+                                }
+                            }
+                            pkDoelCompetentieGKM++;
+
+                            //Lees GKM-letters:
+                            foreach (char chrGKM in ((ListBox)Controls["lstGKM" + Convert.ToString(intDoel)]).Items[iComp].ToString().ToCharArray())
+                            {
+                                //Zoek in de DB naar de PK die bij het GKM hoort:
+                                int pkGKM = 0;
+                                using (SqlCommand cmdPkGKM = new SqlCommand("SELECT pkGedragskenmerk FROM qryGedragskenmerk WHERE pkCompetentie = " + fkComp.ToString() + " AND Gedragskenmerkindex = '" + chrGKM.ToString() + "'", cnnOnderwijs))
+                                {
+                                    using (SqlDataReader rdrPkGKM = cmdPkGKM.ExecuteReader())
+                                    {
+                                        rdrPkGKM.Read();
+                                        if (!rdrPkGKM.IsDBNull(0))
+                                        {
+                                            pkGKM = (int)rdrPkGKM["pkGedragskenmerk"];
+                                        }
+                                        rdrPkGKM.Close();
+                                    }
+                                }
+
+                                //Stel Query samen en voer 'm uit:
+                                using (SqlCommand cmdInsert = new SqlCommand("INSERT INTO tblDoelCompetentieGedragskenmerk (pkId, fkGedragskenmerk, fkDoelCompetentie) " +
+                                    "VALUES (" +
+                                    pkDoelCompetentieGKM.ToString() + ", " +
+                                    pkGKM.ToString() + ", " +
+                                    pkDoelComp.ToString() + ")", cnnOnderwijs))
+                                {
+                                    //MessageBox.Show(cmdInsert.CommandText);
+                                    int intAantalRecords = cmdInsert.ExecuteNonQuery();
+                                }
+
+                                //PK ophogen...
+                                pkDoelCompetentieGKM++;
+                            }
+                        }
+                    }
+                }
+                //**EIND** leerdoelen naar database===============================================================================:
 
 
                 //Toetsmatrijs afsluiten...
@@ -689,6 +1146,73 @@ namespace ImportTM
             txtSucces.Text += "Applicatie gestart" + "\r\n";
             cnnOnderwijs.Open();
             txtSucces.Text += "Databaseconnectie geopend" + "\r\n";
+        }
+
+        private int pkCompetentie(String strCompetentie)
+        {
+            switch (strCompetentie)
+            {
+                case "Analyseren": return 1;
+                case "Ontwerpen": return 2;
+                case "Realiseren": return 3;
+                case "Beheren": return 4;
+                case "Managen": return 5;
+                case "Adviseren": return 6;
+                case "Onderzoeken": return 7;
+                case "Professionaliseren": return 8;
+                default: return -1;
+            }
+        }
+
+        private int pkNiveau(String strFactor, String strCode)
+        {
+            switch (strFactor)
+            {
+                case "AvT":
+                    switch (strCode)
+                    {
+                        case "0":
+                            return 1;
+                        case "I":
+                            return 4;
+                        case "II":
+                            return 7;
+                        case "III":
+                            return 10;
+                        default:
+                            return -1;
+                    }
+                case "AvC":
+                    switch (strCode)
+                    {
+                        case "0":
+                            return 2;
+                        case "I":
+                            return 5;
+                        case "II":
+                            return 8;
+                        case "III":
+                            return 11;
+                        default:
+                            return -1;
+                    }
+                case "MvZ":
+                    switch (strCode)
+                    {
+                        case "0":
+                            return 3;
+                        case "I":
+                            return 6;
+                        case "II":
+                            return 9;
+                        case "III":
+                            return 12;
+                        default:
+                            return -1;
+                    }
+                default:
+                    return -1;
+            }
         }
     }
 }

@@ -207,6 +207,8 @@
             this.lstToetscodes = new System.Windows.Forms.ListBox();
             this.txtSucces = new System.Windows.Forms.TextBox();
             this.txtFail = new System.Windows.Forms.TextBox();
+            this.lstVersies = new System.Windows.Forms.ListBox();
+            this.chkImportInDB = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // txtFilenameTM
@@ -1606,11 +1608,31 @@
             this.txtFail.TabIndex = 181;
             this.txtFail.WordWrap = false;
             // 
+            // lstVersies
+            // 
+            this.lstVersies.FormattingEnabled = true;
+            this.lstVersies.Location = new System.Drawing.Point(85, 813);
+            this.lstVersies.Name = "lstVersies";
+            this.lstVersies.Size = new System.Drawing.Size(735, 95);
+            this.lstVersies.TabIndex = 182;
+            // 
+            // chkImportInDB
+            // 
+            this.chkImportInDB.AutoSize = true;
+            this.chkImportInDB.Location = new System.Drawing.Point(12, 85);
+            this.chkImportInDB.Name = "chkImportInDB";
+            this.chkImportInDB.Size = new System.Drawing.Size(151, 17);
+            this.chkImportInDB.TabIndex = 183;
+            this.chkImportInDB.Text = "Importeren in Database (!!)";
+            this.chkImportInDB.UseVisualStyleBackColor = true;
+            // 
             // frmImport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1550, 802);
+            this.ClientSize = new System.Drawing.Size(1550, 948);
+            this.Controls.Add(this.chkImportInDB);
+            this.Controls.Add(this.lstVersies);
             this.Controls.Add(this.txtFail);
             this.Controls.Add(this.txtSucces);
             this.Controls.Add(this.lstToetscodes);
@@ -1977,6 +1999,8 @@
         private System.Windows.Forms.ListBox lstToetscodes;
         private System.Windows.Forms.TextBox txtSucces;
         private System.Windows.Forms.TextBox txtFail;
+        private System.Windows.Forms.ListBox lstVersies;
+        private System.Windows.Forms.CheckBox chkImportInDB;
     }
 }
 
