@@ -209,6 +209,7 @@
             this.txtFail = new System.Windows.Forms.TextBox();
             this.lstVersies = new System.Windows.Forms.ListBox();
             this.chkImportInDB = new System.Windows.Forms.CheckBox();
+            this.chkToetsvorm = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // txtFilenameTM
@@ -1626,11 +1627,22 @@
             this.chkImportInDB.Text = "Importeren in Database (!!)";
             this.chkImportInDB.UseVisualStyleBackColor = true;
             // 
+            // chkToetsvorm
+            // 
+            this.chkToetsvorm.AutoSize = true;
+            this.chkToetsvorm.Location = new System.Drawing.Point(12, 246);
+            this.chkToetsvorm.Name = "chkToetsvorm";
+            this.chkToetsvorm.Size = new System.Drawing.Size(130, 17);
+            this.chkToetsvorm.TabIndex = 184;
+            this.chkToetsvorm.Text = "Toetsvorm naar DB !!!";
+            this.chkToetsvorm.UseVisualStyleBackColor = true;
+            // 
             // frmImport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1550, 948);
+            this.Controls.Add(this.chkToetsvorm);
             this.Controls.Add(this.chkImportInDB);
             this.Controls.Add(this.lstVersies);
             this.Controls.Add(this.txtFail);
@@ -2001,6 +2013,7 @@
         private System.Windows.Forms.TextBox txtFail;
         private System.Windows.Forms.ListBox lstVersies;
         private System.Windows.Forms.CheckBox chkImportInDB;
+        private System.Windows.Forms.CheckBox chkToetsvorm;
     }
 }
 

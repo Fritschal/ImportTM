@@ -54,7 +54,15 @@ namespace ImportTM
                 blnImport = MessageBox.Show("Weet je zeker dat je wilt importeren in de DB? Checkbox staat aangevinkt!!!", "!!!LET OP!!!", MessageBoxButtons.OKCancel) == DialogResult.OK;
             }
             chkImportInDB.Checked = blnImport;
-            
+
+            bool blnToetsvormImport = false;
+            if (chkToetsvorm.Checked)
+            {
+                blnToetsvormImport = MessageBox.Show("Weet je zeker dat je de toetsvorm wilt importeren in de DB? Checkbox staat aangevinkt!!!", "!!!LET OP!!!", MessageBoxButtons.OKCancel) == DialogResult.OK;
+            }
+            chkToetsvorm.Checked = blnToetsvormImport;
+
+
             //Initialiseren controls:
             txtSucces.Text = "";
             txtFail.Text = "";
@@ -1123,6 +1131,24 @@ namespace ImportTM
                     }
                 }
                 //**EIND** leerdoelen naar database===============================================================================:
+
+                //Toetsvorm naar DB (ben ik wat laat achter gekomen):
+                if (blnToetsvormImport)
+                {
+                    //Toetsvorm:
+                    using (SqlCommand cmdInsert = new SqlCommand("UPDATE tblToets SET fkToetsvorm = " + txtPKToetsvorm.Text + " WHERE pkId = " + txtPKToets.Text, cnnOnderwijs))
+                    {
+                        //MessageBox.Show(cmdInsert.CommandText);
+                        int intAantalRecords = cmdInsert.ExecuteNonQuery();
+                    }
+
+                    //Beoordelingswijze:
+                    using (SqlCommand cmdInsert = new SqlCommand("UPDATE tblToets SET fkBeoordelingswijze = " + txtPKBeoordelingswijze.Text + " WHERE pkId = " + txtPKToets.Text, cnnOnderwijs))
+                    {
+                        //MessageBox.Show(cmdInsert.CommandText);
+                        int intAantalRecords = cmdInsert.ExecuteNonQuery();
+                    }
+                }
 
 
                 //Toetsmatrijs afsluiten...
