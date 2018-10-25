@@ -55,6 +55,13 @@ namespace ImportTM
             }
             chkImportInDB.Checked = blnImport;
 
+            bool blnVersieImport = false;
+            if (chkVersie.Checked)
+            {
+                blnVersieImport = MessageBox.Show("Weet je zeker dat je het versiebeheer wilt importeren in de DB? Checkbox staat aangevinkt!!!", "!!!LET OP!!!", MessageBoxButtons.OKCancel) == DialogResult.OK;
+            }
+            chkVersie.Checked = blnVersieImport;
+
             bool blnToetsvormImport = false;
             if (chkToetsvorm.Checked)
             {
@@ -68,7 +75,7 @@ namespace ImportTM
             txtFail.Text = "";
             lstToetscodes.Items.Clear();
 
-            //Selecteer een bestand zodat de map met toetsmatrijzen bekend is:Pick/Wick#12
+            //Selecteer een bestand zodat de map met toetsmatrijzen bekend is:
             if (openTM.FileName.Equals("<leeg>"))
             {
                 openTM.FileName = "Toetsmatrijs";
