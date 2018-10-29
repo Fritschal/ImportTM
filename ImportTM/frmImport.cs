@@ -835,7 +835,7 @@ namespace ImportTM
                         txtSucces.Text += strVersie + "|" + strDatum + "|" + strAuteur + "|" + strBeschrijving + "\r\n";
 
                         //Importeer de versieregel in de database:
-                        if (blnImport && false)
+                        if (blnVersieImport)
                         {
                             // Stap 1: haal pkId op uit de database:
                             int intMaxId = 0;
@@ -860,7 +860,7 @@ namespace ImportTM
                                 fkToets.ToString() + ", " +
                                 strVersie + ", '" +
                                 strDatum + "', " +
-                                "16" + ", '" +
+                                "19" + ", '" +
                                 strBeschrijving + "', '" +
                                 strAuteur + "')", cnnOnderwijs))
                             {
